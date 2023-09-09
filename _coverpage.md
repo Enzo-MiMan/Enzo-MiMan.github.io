@@ -9,4 +9,4 @@
 - CSDN ：Enzo 想砸电脑
 
 [GitHub](https://github.com/Enzo-MiMan)
-[开始学习](#docsify)
+[开始学习](/brief)
