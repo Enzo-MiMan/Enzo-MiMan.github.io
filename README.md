@@ -1,6 +1,4 @@
 # Enzo's Blog
 
-- [Diffusion](/diffusion/)
-  - [Diffusion](/diffusion/)
-
+待填充内容
 
