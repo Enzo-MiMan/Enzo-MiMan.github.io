@@ -1,4 +1,8 @@
-![logo](_media/封面2.jpg)
+
+
+<img src="_media/封面2.jpg" width="599">
+
+
 
 # Enzo's Blog
 

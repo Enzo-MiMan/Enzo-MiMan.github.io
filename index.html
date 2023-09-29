@@ -6,33 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"> -->
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'Enzo‘s Blog',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      coverpage: true,
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-        paths: [], // or 'auto'
+        paths: 'auto',
         placeholder: '请输入搜索关键字',
         noData: '找不到结果!',
         depth: 2
       },
+      name: 'Enzo\'s Blog',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      coverpage: true,
+      // toc: {
+      // scope: '.markdown-section',
+      // headings: 'h1, h2, h3, h4, h5, h6',
+      // title: '内容',
+      // },
       count:{
         countable:true,
         fontsize:'0.9em',
         color:'rgb(90,90,90)',
         language:'chinese'
       }
-
     }
   </script>
   <!-- Docsify v4 -->
@@ -43,7 +47,9 @@
   <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <!-- <script src="//unpkg.com/@rakutentech/docsify-code-inline/dist/index.min.js"></script> -->
 </body>
 </html>
 

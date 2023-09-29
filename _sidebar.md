@@ -1,44 +1,48 @@
 <!-- docs/_sidebar.md --> 
 
-* [介绍](/brief) 
-* 一、基础知识
-    * 网络搭建
-        * [1、查看网络层](/basicKnowledge/查看网络层.md)
-        * 2、修改网络层
-        * 3、查看网络参数
+* 网络搭建
+  * [查看网络层](/网络搭建/1_查看网络层.md)
+  * [查看网络参数](/网络搭建/2_查看网络参数.md)
+  * [修改网络层](/网络搭建/3_修改网络层.md)
+  * [初始化网络参数](/网络搭建/4_初始化网络参数.md)
+  * [Sequential | ModuleList | ModuleDict](/网络搭建/5_Sequential_ModuleList_ModuleDict.md)
+  * 模型查看
 
-    * 数据集研究
-        * Pascal VOC 2007  & 2012
-        * MS COCO
-        * 
 
-    * 数据预处理
-        * 数据增强
-        * ToTensor
-        * 归一化
+* 数据集
+    * [Pascal VOC 2007  & 2012](/数据集/1_Pascal_VOC.md)
+    * [MS COCO](/数据集/2_MS_COCO.md)
+    * [CIFAR10 & CIFAR100](/数据集/3_CIFAR)
+    * [Flowers](/数据集/4_Flowers)
+    * [MNIST 手写数字](/数据集/5_MNIST)
+    * [YOLO数据集格式](/数据集/6_YOLO)
+* 数据读取与处理（torchvision的使用）
 
-    * 预训练模型
-        * 获取预训练模型及参数
+    * 数据预处理与数据增强
+    * [数据读取 torchvision.datasets ](/数据读取与预处理/1_datasets.md)
+    * Dataset 与 DataLoader
+    
+* 预训练模型
+    * 获取预训练模型及参数
+* 优化器 与 学习率 
+    * warm up
+    * 学习率与优化器
+    * [不同层设置不同学习率](/basicKnowledge/不同层设置不同学习率.md)
+* 训练日志
 
-    * 优化器 与 学习率 
-        * warm up
-        * 学习率与优化器
-        * [不同层设置不同学习率](/basicKnowledge/不同层设置不同学习率.md)
+    * [wandb](/basicKnowledge/wandb.md)
+    * TensorboardX
+* 网络(参数) 保存 与 加载
+* [命令行参数解析 argparse](/basicKnowledge/argparse.md)
+* 图像分类
+* 目标检测
+* 语义分割
+* 图像生成
 
-    * 7、训练日志
-    * 8、网络(参数) 保存 与 加载
-
-* 二、数据集研究
-* 三、图像分类
-* 四、目标检测
-* 五、语义分割
-* 六、图像生成
+    * 图像生成基础知识
+    * GAN
+    * VAE
     * Diffusion
-        * [1、基础知识准备](/diffusion/1_basic)
-        * [2、极大似然函数](/diffusion/2_likelihood)
-        * [3、变分推断](/diffusion/3_VI)
-        * [4、DDPM](/diffusion/4_DDPM)
-    * 相关基础知识
-        * [1、似然、极大似然估计](/basicKnowledge/likelihood)
-        * [2、期望最大化EM](/basicKnowledge/EM)
 
+
+- 终端部署
