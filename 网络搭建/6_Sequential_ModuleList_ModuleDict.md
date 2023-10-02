@@ -1,3 +1,7 @@
+b站视频 ：https://www.bilibili.com/video/BV1zu4y1i7Bk
+
+----
+
 ### 1、简介
 
 1）nn.Sequential 、 nn.ModuleList 、 nn.ModuleDict 类都继承自 Module 类。
