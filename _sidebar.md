@@ -13,6 +13,7 @@
   * [register_buffer() 与 register_parameter()](/网络搭建/7_register_buffer与register_parameter.md)
   * [BatchNorm](/网络搭建/8_BatchNorm.md)
   * [BatchNorm｜LayerNorm｜GroupNorm](/网络搭建/9_BatchNorm｜LayerNorm｜GroupNorm.md)
+  * 网络(参数) 保存 与 加载
   
 
 
@@ -31,22 +32,20 @@
 * 预训练模型
     * 获取预训练模型及参数
 * 优化器 与 学习率 
-    * warm up
-    * 学习率与优化器
+    * 优化器
     * [不同层设置不同学习率](/basicKnowledge/不同层设置不同学习率.md)
+    * 学习率调度器
+    * 优化器与学习率
+    * warm up
 * 训练日志
 
     * [wandb](/basicKnowledge/wandb.md)
     * TensorboardX
-* 可视化
+* 其他
 
-    * TensorboardX
-    * Netron
+    * [命令行参数解析 argparse](/其他/1_argparse.md)
 
-* 网络(参数) 保存 与 加载
-* [命令行参数解析 argparse](/basicKnowledge/argparse.md)
 * 图像分类
-
 * 目标检测
 * 语义分割
 * Diffusion
