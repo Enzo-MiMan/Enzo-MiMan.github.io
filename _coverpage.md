@@ -6,7 +6,7 @@
 
 # Enzo's Blog
 
-> Be Aggressive
+> 《深度学习基础 - Pytorch》
 
 - B站：Enzo_Mi
 - github：Enzo-MiMan

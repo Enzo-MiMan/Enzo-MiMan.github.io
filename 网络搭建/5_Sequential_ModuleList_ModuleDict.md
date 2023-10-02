@@ -18,7 +18,7 @@ net = nn.ModuleDict({'linear': nn.Linear(32, 64), 'act': nn.ReLU()})
 
 
 
-### 2、Sequential 、ModuleDict、 ModuleList 的区别
+### 2、nn.Sequential 、nn.ModuleDict、 nn.ModuleList 的区别
 
   1）ModuleList 仅仅是一个储存各种模块的列表，这些模块之间没有联系也没有顺序（所以不用保证相邻层的输入输出维度匹配），而且没有实现 forward 功能需要自己实现
 
@@ -129,7 +129,7 @@ print(net(x).shape)
 
 
 
-### 3、ModuleDict、 ModuleList 的区别
+### 3、nn.ModuleDict、nn.ModuleList 的区别
 
   1）ModuleDict 可以给每个层定义名字，ModuleList 不会
 
