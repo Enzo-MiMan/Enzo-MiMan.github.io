@@ -47,15 +47,15 @@
 * [命令行参数解析 argparse](/basicKnowledge/argparse.md)
 * 图像分类
 
-    * AlexNet
 * 目标检测
 * 语义分割
-* 图像生成
+* Diffusion
 
-    * 图像生成基础知识
-    * GAN
-    * VAE
-    * Diffusion
+    * DDPM
+      * [1、概述](/Diffusion/DDPM/1_概述.md)
+      * [2、基础知识准备](/Diffusion/DDPM/2_基础知识准备.md)
+      * [3、公式推导_前向扩散](/Diffusion/DDPM/3_公式推导_前向扩散.md)
+      * [4、公式推导_损失函数](/Diffusion/DDPM/4_公式推导_损失函数.md)
 * Kaggle
 
 
