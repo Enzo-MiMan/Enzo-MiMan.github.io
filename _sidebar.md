@@ -4,7 +4,10 @@
 - [GitHub](https://github.com/Enzo-MiMan)
 
 * 网络搭建
-  * [查看网络结构](/网络搭建/1_查看网络结构.md)
+  * 查看网络结构
+    * [torchsummary](/网络搭建/查看网络结构/1_torchsummary.md)
+    * [Netron](/网络搭建/查看网络结构/2_netron.md)
+    * [TensorBoardX](/网络搭建/查看网络结构/3_TensorBoardX.md)
   * [查看网络层](/网络搭建/2_查看网络层.md)
   * [查看网络参数](/网络搭建/3_查看网络参数.md)
   * [增删改网络的层](/网络搭建/4_增删改网络的层.md)
@@ -29,8 +32,6 @@
     * 数据预处理与数据增强
     * [数据读取 torchvision.datasets ](/数据读取与预处理/1_datasets.md)
     * Dataset 与 DataLoader
-* 预训练模型
-    * 获取预训练模型及参数
 * 优化器 与 学习率 
     * 优化器
     * [不同层设置不同学习率](/basicKnowledge/不同层设置不同学习率.md)
@@ -39,23 +40,13 @@
     * warm up
 * 训练日志
 
-    * [wandb](/basicKnowledge/wandb.md)
-    * TensorboardX
+    * [logging](/basicKnowledge/1_logging.md)
+    * [wandb](/basicKnowledge/2_wandb.md)
+    * [TensorboardX](/basicKnowledge/3_TensorboardX.md)
+* 迁移学习
+    * 获取预训练模型获取
+    * 模型部分组装
+    * 参数冻结
 * 其他
 
     * [命令行参数解析 argparse](/其他/1_argparse.md)
-
-* 图像分类
-* 目标检测
-* 语义分割
-* Diffusion
-
-    * DDPM
-      * [1、概述](/Diffusion/DDPM/1_概述.md)
-      * [2、基础知识准备](/Diffusion/DDPM/2_基础知识准备.md)
-      * [3、公式推导_前向扩散](/Diffusion/DDPM/3_公式推导_前向扩散.md)
-      * [4、公式推导_损失函数](/Diffusion/DDPM/4_公式推导_损失函数.md)
-* Kaggle
-
-
-- 终端部署
