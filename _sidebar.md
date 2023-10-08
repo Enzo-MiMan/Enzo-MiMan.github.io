@@ -8,9 +8,19 @@
     * [torchsummary](/网络搭建/查看网络结构/1_torchsummary.md)
     * [Netron](/网络搭建/查看网络结构/2_netron.md)
     * [TensorBoardX](/网络搭建/查看网络结构/3_TensorBoardX.md)
-  * [查看网络层](/网络搭建/2_查看网络层.md)
-  * [查看网络参数](/网络搭建/3_查看网络参数.md)
-  * [增删改网络的层](/网络搭建/4_增删改网络的层.md)
+  * 查看网络的层
+    * [net.modules()、net.named_modules()](/网络搭建/查看网络的层/1_modules.md)
+    * [net.children() 、net.named_children()](/网络搭建/查看网络的层/2_child.md)
+  
+  * 查看网络参数
+    * [net.parameters()](/网络搭建/查看网络参数/1_parameters.md)
+    * [net.state_dict()](/网络搭建/查看网络参数/2_state_dict.md)
+  
+  * 增删改网络的层
+    * [删除层](/网络搭建/增删改网络的层/1_删除层.md)
+    * [修改层](/网络搭建/增删改网络的层/2_修改层.md)
+    * [添加层](/网络搭建/增删改网络的层/3_添加层.md)
+  
   * [初始化网络参数(待更新)](/网络搭建/5_初始化网络参数.md)
   * [Sequential | ModuleList | ModuleDict](/网络搭建/6_Sequential_ModuleList_ModuleDict.md)
   * [register_buffer() 与 register_parameter()](/网络搭建/7_register_buffer与register_parameter.md)

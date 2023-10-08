@@ -2,7 +2,15 @@ b站视频 ：https://www.bilibili.com/video/BV1X8411f7q1?p=2
 
 ----
 
-以下内容均基于此网络
+
+
+## net.parameters()、named_parameters() <!-- {docsify-ignore} -->
+
+<br />
+
+### 1）net.parameters()
+
+`net.parameters()` 用于查看网络中的<mark>参数</mark>
 
 ```python
 import torch
@@ -30,32 +38,7 @@ class MyModel(torch.nn.Module):
       
 # 构造网络对象
 net = MyModel()
-print(net)
-```
 
-输出
-
-```
-MyModel(
-  (layer1): Sequential(
-    (0): Linear(in_features=3, out_features=4, bias=True)
-    (1): Linear(in_features=4, out_features=3, bias=True)
-  )
-  (layer2): Linear(in_features=3, out_features=6, bias=True)
-  (layer3): Sequential(
-    (0): Linear(in_features=6, out_features=7, bias=True)
-    (1): Linear(in_features=7, out_features=5, bias=True)
-  )
-)
-```
-
-
-
-## 1、net.parameters()
-
-`net.parameters()` 用于查看网络中的<mark>参数</mark>
-
-```python
 for param in net.parameters():
     print(param.shape)
 ```
@@ -75,15 +58,43 @@ torch.Size([5, 7])
 torch.Size([5])
 ```
 
+<br />
+
+<br />
 
 
 
-
-## 2、named_parameters()
+### 2、net.named_parameters()
 
 `net.parameters()` 用于查看网络中的参数名和 参数
 
 ```python
+import torch
+
+# 搭建网络
+class MyModel(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.layer1 = torch.nn.Sequential(
+            torch.nn.Linear(3, 4),
+            torch.nn.Linear(4, 3),
+        )
+        self.layer2 = torch.nn.Linear(3, 6)
+
+        self.layer3 = torch.nn.Sequential(
+            torch.nn.Linear(6, 7),
+            torch.nn.Linear(7, 5),
+        )
+
+    def forward(self, x):
+        x = self.layer1(x)
+        x = self.layer2(x)
+        x = self.layer3(x)
+        return x
+      
+# 构造网络对象
+net = MyModel()
+
 for name, param in net.named_parameters():
     print(name, param.shape)
 ```
@@ -100,43 +111,6 @@ layer3.0.bias torch.Size([7])
 layer3.1.weight torch.Size([5, 7])
 layer3.1.bias torch.Size([5])
 ```
-
-
-
-----
-
- 
-
-## 3、net.state_dict()
-
-`net.state_dict()` 会将网路中的 参数名 和参数 转换为 字典的格式
-
-（我们经常用它 将参数转换为字典的格式，然后再保存起来）
-
-
-```python
-for key, value in net.state_dict().items():
-    print(key, value.shape)
-```
-
-输出
-
-```
-layer1.0.weight torch.Size([4, 3])
-layer1.0.bias torch.Size([4])
-layer1.1.weight torch.Size([3, 4])
-layer1.1.bias torch.Size([3])
-layer2.weight torch.Size([6, 3])
-layer2.bias torch.Size([6])
-layer3.0.weight torch.Size([7, 6])
-layer3.0.bias torch.Size([7])
-layer3.1.weight torch.Size([5, 7])
-layer3.1.bias torch.Size([5])
-```
-
-
-
-
 
 
 

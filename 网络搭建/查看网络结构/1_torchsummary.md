@@ -1,6 +1,12 @@
+b站视频 ：https://www.bilibili.com/video/BV1ZH4y1f7T1
+
+---
+
+
+
 ## torchsummary.summary   <!-- {docsify-ignore} -->
 
-
+<br />
 
 ### 1）函数介绍
 
@@ -16,7 +22,9 @@ torchsummary.summary(model, input_size=(3, 224, 224))
 
 - `input_size` ：指定网络输入尺寸，可以指定输入的四个维度尺寸（B, C, H, W），也可以只指定输入的三个维度尺寸（C, H, W），如果仅指定三个维度的尺寸（不指定batch_size），那么每一层的输出尺寸 `output shape` 都显示为 -1
 
+<br />
 
+<br />
 
 ### 2）使用举例
 

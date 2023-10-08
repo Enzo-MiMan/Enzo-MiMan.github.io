@@ -1,4 +1,6 @@
+b站视频 ： https://www.bilibili.com/video/BV14w411r7cx
 
+---
 
 
 
@@ -6,7 +8,9 @@
 
 
 
-netron 的两种使用方式： 1、使用在线版； 2、下载本地版
+netron 的两种使用方式：   1、使用在线版；   2、下载本地版
+
+<br />
 
 ### 1）使用在线版
 
@@ -15,15 +19,23 @@ netron 的两种使用方式： 1、使用在线版； 2、下载本地版
 
 <img src="https://p.ipic.vip/yp509b.png" alt="img" style="zoom:25%;" />
 
+<br />
 
+<br />
+
+<br />
 
 ### 2）下载本地版
 
 终端进行安装： `pip install netron`
+
 安装完成后，在脚本中 调用包 `import netron`
+
 运行程序  `netron.start("model.onnx")`， 会自动打开浏览器进行可视化 （最后有例子）
 
+<br />
 
+<br />
 
 ### 3）支持的网络框架 和 模型文件类型
 
@@ -35,9 +47,9 @@ netron 的两种使用方式： 1、使用在线版； 2、下载本地版
 
 另外，netron 可以直接可视化 yolo  （DarkNet 框架）的 .cfg文件，非常方便
 
+<br />
 
-
-
+<br />
 
 ### 4）使用举例
 
@@ -47,7 +59,9 @@ netron 的两种使用方式： 1、使用在线版； 2、下载本地版
 
 
 
-可以同过 `onnx.save(onnx.shape_inference.infer_shapes(onnx.load("model.onnx")), "model.onnx")` 进行处理。这样中间的每一层的输入输出就都会推理出 并可视化出来了。
+可以通过 `onnx.save(onnx.shape_inference.infer_shapes(onnx.load("model.onnx")), "model.onnx")` 进行处理，
+
+这样中间的每一层的输入输出就都会推理出 并可视化出来了。
 
 ```python
 import torch

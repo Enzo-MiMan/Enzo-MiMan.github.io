@@ -1,18 +1,24 @@
+b站视频 ： https://www.bilibili.com/video/BV1rh411M7JP
+
+---
+
 
 
 ## TensorBoardX <!-- {docsify-ignore} -->
 
-
+<br />
 
 使用 `TensorBoardX` 查看网络结构，分为三个步骤：
 
-1）实例化一个 `SummaryWriter` 对象
+$\quad$ 1）实例化一个 `SummaryWriter` 对象
 
-2）让 `SummaryWriter ` 对象调用 `add_graph` 方法来获取模型结构
+$\quad$ 2）让 `SummaryWriter ` 对象调用 `add_graph` 方法来获取模型结构
 
-3）打开浏览器查看 模型的可视化起结构
+$\quad$ 3）打开浏览器查看 模型的可视化起结构
 
+<br />
 
+<br />
 
 ### 1）实例化 SummaryWriter
 
@@ -32,7 +38,9 @@ writer3 = SummaryWriter(comment='_resnet')
 
 ```
 
+<br />
 
+<br />
 
 ### 2）add_graph 函数介绍
 
@@ -45,7 +53,9 @@ add_graph(model, input_to_model=None, verbose=False, **kwargs)
 - `model` : 待可视化的网络模型
 - `input_to_model` : 待输入神经网络的变量或一组变量
 
+<br />
 
+<br />
 
 ### 3）浏览器查看结果
 
@@ -59,7 +69,9 @@ tensorboard --logdir ./logs --port 6006
 
 在浏览器窗口输入地址：http://localhost:6006/   ， 查看模型网络结构
 
+<br />
 
+<br />
 
 ### 4）使用举例
 
