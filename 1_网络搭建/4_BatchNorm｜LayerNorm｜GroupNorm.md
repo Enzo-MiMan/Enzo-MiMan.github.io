@@ -4,6 +4,8 @@ b站视频 ：https://www.bilibili.com/video/BV1UG411f7DL/
 
 
 
+## BatchNorm、LayerNorm、GroupNorm <!-- {docsify-ignore} -->
+
 BatchNorm、LayerNorm 和 GroupNorm 都是深度学习中常用的归一化方式。
 
 它们通过将输入归一化到均值为 0 和方差为 1 的分布中，来防止梯度消失和爆炸，并提高模型的泛化能力。 
@@ -44,7 +46,7 @@ for i in range(feature_array.shape[1]):
     print(var)
 
     feature_array[:, i, :, :] = (feature_array[:, i, :, :] - mean) / np.sqrt(var + 1e-5)
-print(feature_array) 作者：Enzo_Mi https://www.bilibili.com/read/cv25802289/ 出处：bilibili
+print(feature_array) 
 ```
 
 

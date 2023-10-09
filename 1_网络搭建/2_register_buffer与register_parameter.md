@@ -2,44 +2,25 @@ b站视频 ：https://www.bilibili.com/video/BV1Bh4y1V7Sd
 
 ----
 
-
-
-```python
-import torch
-import torch.nn as nn
-
-
-class MyModule(nn.Module):
-    def __init__(self):
-        super(MyModule, self).__init__()
-        self.conv1 = nn.Conv2d(in_channels=3, out_channels=6, kernel_size=3, stride=1, padding=1, bias=False)
-        self.conv2 = nn.Conv2d(in_channels=6, out_channels=9, kernel_size=3, stride=1, padding=1,  bias=False)
-
-        self.weight = torch.ones(10, 10)
-        self.bias = torch.zeros(10)
-
-    def forward(self, x):
-        x = self.conv1(x)
-        x = self.conv2(x)
-        x = x + self.weight - self.bias
-        return x
-```
+## register_buffer、register_parameter <!-- {docsify-ignore} -->
 
 
 
 ## 1、register_parameter()
-register_parameter()是 torch.nn.Module 类中的一个方法
+register_parameter() 是 torch.nn.Module 类中的一个方法
 
 
 
-### 1.1、 作用
-- 可将 self.weight 和 self.bias 定义为可学习的参数，保存到网络对象的参数中，被优化器作用进行学习
+### 1.1、 作用与性质
+- 定义可学习的参数
 
-- self.weight 和 self.bias 可被保存到 state_dict 中，进而可以 保存到网络文件 / 网络参数文件中
+- 定义的参数可被保存到网络对象的参数中，可使用 `net.parameters()` 或 `net.named_parameters()` 查看
+
+- 定义的参数可被保存到 state_dict 中，进而可以 保存到网络文件 / 网络参数文件中
 
 
 
-### 1.2、用法
+### 1.2、函数说明
 ```python
 register_parameter(name，param)
 ```
@@ -53,6 +34,8 @@ register_parameter(name，param)
 `TypeError: cannot assign 'torch.FloatTensor' object to parameter 'xx' (torch.nn.Parameter or None required) `
 
 
+
+### 1.3、使用举例
 
 ```python
 import torch
@@ -87,21 +70,23 @@ for key, val in net.state_dict().items():
     print(key, val.shape) 作者：Enzo_Mi https://www.bilibili.com/read/cv25270794/ 出处：bilibili
 ```
 
+---
 
+<br />
 
 ## 2、register_buffer()
 register_buffer()是 torch.nn.Module() 类中的一个方法
 
 
 
-### 2.1 、作用
-- 将 self.weight 和 self.bias 定义为不可学习的参数，不会被保存到网络对象的参数中，不会被优化器作用进行学习
+### 2.1 、作用与性质
+- 定义不可学习的参数
+- 定义的参数<mark>不会被</mark>保存到网络对象的参数中，使用 `net.parameters()` 或 `net.named_parameters()` 查看不到
+- 定义的参数可被保存到 state_dict 中，进而可以 保存到网络文件 / 网络参数文件中
 
-- self.weight 和 self.bias 可被保存到 state_dict 中，进而可以 保存到网络文件 / 网络参数文件中
 
 
-
-它用于在网络实例中 注册缓冲区，存储在缓冲区中的数据，类似于参数（但不是参数）
+`register_buffer()` 用于在网络实例中 注册缓冲区，存储在缓冲区中的数据，类似于参数（但不是参数），它与参数的区别为：
 
 - 参数：可以被优化器更新  （requires_grad=False / True）
 
@@ -109,12 +94,18 @@ register_buffer()是 torch.nn.Module() 类中的一个方法
 
 
 
-### 2.2、用法
+### 2.2、函数说明
+```python
 register_buffer(name，tensor)
+```
 
 - `name`：参数名称
 
 - `tensor`：张量
+
+
+
+### 2.3、使用举例
 
 ```python
 import torch

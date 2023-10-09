@@ -31,12 +31,12 @@
   * [参数保存与加载(待)](/6_保存与加载/2_参数保存与加载.md)
 
 * 数据集
-    * [Pascal VOC 2007  & 2012](/数据集/1_Pascal_VOC.md)
-    * [MS COCO](/数据集/2_MS_COCO.md)
-    * [CIFAR10 & CIFAR100](/数据集/3_CIFAR)
-    * [Flowers](/数据集/4_Flowers)
-    * [MNIST 手写数字](/数据集/5_MNIST)
-    * [YOLO数据集格式](/数据集/6_YOLO)
+    * [Pascal VOC 2007  & 2012](/7_数据集/1_Pascal_VOC.md)
+    * [MS COCO(未完)](/7_数据集/2_MS_COCO.md)
+    * [CIFAR10 & CIFAR100](/7_数据集/3_CIFAR)
+    * [Flowers](/7_数据集/4_Flowers)
+    * [MNIST 手写数字](/7_数据集/5_MNIST)
+    * [YOLO数据集格式](/7_数据集/6_YOLO)
 * 数据读取与处理（torchvision的使用）
 
     * [数据读取 -- torchvision.datasets ](/数据读取与预处理/1_datasets.md)

@@ -2,6 +2,12 @@ b站视频 ：https://www.bilibili.com/video/BV1zu4y1i7Bk
 
 ----
 
+
+
+## nn.Sequential、nn.Module、nn.List_ModuleDict <!-- {docsify-ignore} -->
+
+<br />
+
 ### 1、简介
 
 1）nn.Sequential 、 nn.ModuleList 、 nn.ModuleDict 类都继承自 Module 类。
@@ -16,11 +22,9 @@ net = nn.ModuleList([nn.Linear(32, 6)4, nn.ReLU()])
 net = nn.ModuleDict({'linear': nn.Linear(32, 64), 'act': nn.ReLU()})
 ```
 
-
-
 ----
 
-
+<br />
 
 ### 2、nn.Sequential 、nn.ModuleDict、 nn.ModuleList 的区别
 
@@ -127,11 +131,9 @@ x = torch.randn(8, 3, 32)
 print(net(x).shape)
 ```
 
-
-
 ----
 
-
+<br />
 
 ### 3、nn.ModuleDict、nn.ModuleList 的区别
 
@@ -157,11 +159,9 @@ net['linear2'] = nn.Linear(64, 128)
 print(net)
 ```
 
+---
 
-
-
-
-
+<br />
 
 ### 4、nn.ModuleList 、 nn.ModuleDict 与 Python  list、Dict 的区别
 
