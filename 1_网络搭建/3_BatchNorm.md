@@ -12,6 +12,8 @@ Axure课件：https://rmt0w2.axshare.com/?g=1&id=6q1by1&p=bn&sc=3
 
 ### 1、作用
 
+
+
 ![image-20231009130131007](https://p.ipic.vip/7hste3.png)
 
 <br />
@@ -26,7 +28,7 @@ Axure课件：https://rmt0w2.axshare.com/?g=1&id=6q1by1&p=bn&sc=3
 
 <br />
 
-### 3、代码演示，查看BN 层中的参数数量
+### 3、查看BN 层中的参数数量
 
 BN层中有 weight 和 bias 两个参数（也就是上面计算方式 中的 gamma 和 beta）
 

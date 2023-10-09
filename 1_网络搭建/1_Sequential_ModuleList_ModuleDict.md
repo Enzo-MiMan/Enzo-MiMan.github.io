@@ -10,9 +10,9 @@ b站视频 ：https://www.bilibili.com/video/BV1zu4y1i7Bk
 
 ### 1、简介
 
-1）nn.Sequential 、 nn.ModuleList 、 nn.ModuleDict 类都继承自 Module 类。
+1）nn.Sequential、nn.ModuleList、nn.ModuleDict 类都继承自 Module 类。
 
-2）nn.Sequential、nn.ModuleList 和 nn.ModuleDict语法
+2）nn.Sequential、nn.ModuleList、nn.ModuleDict 语法，类似如下：
 
 ```python
 net = nn.Sequential(nn.Linear(32, 64), nn.ReLU())
@@ -26,13 +26,13 @@ net = nn.ModuleDict({'linear': nn.Linear(32, 64), 'act': nn.ReLU()})
 
 <br />
 
-### 2、nn.Sequential 、nn.ModuleDict、 nn.ModuleList 的区别
+### 2、nn.Sequential、nn.Module、nn.List_ModuleDict 区别
 
-  1）ModuleList 仅仅是一个储存各种模块的列表，这些模块之间没有联系也没有顺序（所以不用保证相邻层的输入输出维度匹配），而且没有实现 forward 功能需要自己实现
+  1）`nn.ModuleList` 仅仅是一个储存各种模块的列表，这些模块之间没有联系也没有顺序（所以不用保证相邻层的输入输出维度匹配），而且没有实现 forward 功能需要自己实现
 
-  2）和 ModuleList 一样， ModuleDict 实例仅仅是存放了一些模块的字典，并没有定义 forward 函数需要自己定义
+  2）和`nn.ModuleList` 一样， `nn.ModuleDict` 实例仅仅是存放了一些模块的字典，并没有定义 forward 函数需要自己定义
 
-  3）而 Sequential 内的模块需要按照顺序排列，要保证相邻层的输入输出大小相匹配，内部 forward 功能已经实现，所以，直接如下写模型，是可以直接调用的，不再需要写forward，sequential 内部已经有 forward
+  3）而 `nn.Sequential` 内的模块需要按照顺序排列，要保证相邻层的输入输出大小相匹配；`nn.sequential` 内部 forward 功能已经实现，直接调用的，不需要再写 forward
 
 ```python
 import torch

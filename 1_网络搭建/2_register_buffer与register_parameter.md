@@ -12,11 +12,9 @@ register_parameter() 是 torch.nn.Module 类中的一个方法
 
 
 ### 1.1、 作用与性质
-- 定义可学习的参数
-
+- 用于定义<mark>可学习参数</mark>
 - 定义的参数可被保存到网络对象的参数中，可使用 `net.parameters()` 或 `net.named_parameters()` 查看
-
-- 定义的参数可被保存到 state_dict 中，进而可以 保存到网络文件 / 网络参数文件中
+- 定义的参数可用 `net.state_dict()` 转换到字典中，进而 保存到网络文件 / 网络参数文件中
 
 
 
@@ -29,7 +27,7 @@ register_parameter(name，param)
 
 - `name`：参数名称
 
-- `param`：参数张量， 须是 `torch.nn.Parameter()`对象 或 None ，否则报错如下
+- `param`：参数张量， 须是 `torch.nn.Parameter()` 对象 或 None ，否则报错如下
 
 `TypeError: cannot assign 'torch.FloatTensor' object to parameter 'xx' (torch.nn.Parameter or None required) `
 
@@ -80,9 +78,9 @@ register_buffer()是 torch.nn.Module() 类中的一个方法
 
 
 ### 2.1 、作用与性质
-- 定义不可学习的参数
+- 用于定义<mark>不可学习的参数</mark>
 - 定义的参数<mark>不会被</mark>保存到网络对象的参数中，使用 `net.parameters()` 或 `net.named_parameters()` 查看不到
-- 定义的参数可被保存到 state_dict 中，进而可以 保存到网络文件 / 网络参数文件中
+- 定义的参数可用 `net.state_dict()` 转换到字典中，进而 保存到网络文件 / 网络参数文件中
 
 
 
@@ -137,7 +135,7 @@ for name, param in net.named_parameters():
 print('\n', '*'*40, '\n')
 
 for key, val in net.state_dict().items():
-    print(key, val.shape) 作者：Enzo_Mi https://www.bilibili.com/read/cv25270794/ 出处：bilibili
+    print(key, val.shape)
 ```
 
 

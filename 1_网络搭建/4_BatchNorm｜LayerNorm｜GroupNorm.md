@@ -13,11 +13,15 @@ BatchNorm、LayerNorm 和 GroupNorm 都是深度学习中常用的归一化方�
 
 
 ## 1、BatchNorm
-一般 CNN 中，卷积层后面会跟一个 BatchNorm 层，减少梯度消失和爆炸，提高模型的稳定性。 更详细的介绍见[上一小节](/网络搭建/8_BatchNorm.md)
+一般 CNN 中，卷积层后面会跟一个 BatchNorm 层，减少梯度消失和爆炸，提高模型的稳定性。 更详细的介绍见[上一小节](/1_网络搭建/3_BatchNorm.md)
 
 <img src="https://p.ipic.vip/e7rrj9.jpg" alt="img"  />
 
+<br />
 
+
+
+对比手动计算的 BN层输出结果 和 调用 `nn.BatchNorm()`  的输出结果
 
 ```python
 import torch
@@ -49,9 +53,9 @@ for i in range(feature_array.shape[1]):
 print(feature_array) 
 ```
 
+<br />
 
-
-
+<br />
 
 ## 2、LayerNorm
 Transformer block 中会使用到 LayerNorm ， 一般输入尺寸形为 ：（batch_size, token_num, dim），会在最后一个维度做 归一化： nn.LayerNorm(dim) 
@@ -62,7 +66,7 @@ Transformer block 中会使用到 LayerNorm ， 一般输入尺寸形为 ：（b
 
 
 
-
+对比手动计算的 LN层输出结果 和 调用 `nn.LayerNorm()`  的输出结果
 
 ```python
 import torch
@@ -98,7 +102,9 @@ print(feature_array.reshape(b, token_num, dim))
 
 
 
+<br />
 
+<br />
 
 ## 3、GroupNorm
 
@@ -118,11 +124,13 @@ batch size 过大或过小都不适合使用 BN，而是使用 GN。
 
   比如，Deformable DETR 中，就用到了 GroupNorm 
 
-![img](https://i0.hdslb.com/bfs/article/7645d04f5d8f509b0a4e534c6b7b04853f7f7dfe.png@1256w_560h_!web-article-pic.avif)
+![img](https://p.ipic.vip/9m1h76.jpg)
 
 
 
+<br />
 
+对比手动计算的 LN层输出结果 和 调用 `nn.LayerNorm()` 的输出结果
 
 ```python
 import torch
@@ -157,13 +165,13 @@ feature_array = feature_array.reshape((2, 2, 2, 2, 2)).reshape((2, 4, 2, 2))
 print(feature_array)
 ```
 
+<br />
 
-
-
+<br />
 
 ## 附
 
-LayerNorm 参数num_features 的使用 
+`nn.LayerNorm` 参数 num_features 的使用 
 
 ![img](https://p.ipic.vip/cfv8gd.jpg)
 
