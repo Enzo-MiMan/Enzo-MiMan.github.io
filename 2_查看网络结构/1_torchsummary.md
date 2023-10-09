@@ -10,7 +10,7 @@ b站视频 ：https://www.bilibili.com/video/BV1ZH4y1f7T1
 
 ### 1）函数介绍
 
-作用 ： 可以通过指定输入尺寸，来查看网络每一层的输出尺寸 和 每一层的参数数量。 只需指定输入尺寸即可，不需要实际的输入数据。
+作用 ： 通过指定输入尺寸，来查看网络每一层的输出尺寸 和 每一层的参数数量。 <mark>只需指定 input_size 即可，不需要实际的输入数据。</mark>
 
 ```python
 torchsummary.summary(model, input_size=(3, 224, 224))
@@ -20,7 +20,9 @@ torchsummary.summary(model, input_size=(3, 224, 224))
 
 - `model` ：要查看的网络
 
-- `input_size` ：指定网络输入尺寸，可以指定输入的四个维度尺寸（B, C, H, W），也可以只指定输入的三个维度尺寸（C, H, W），如果仅指定三个维度的尺寸（不指定batch_size），那么每一层的输出尺寸 `output shape` 都显示为 -1
+- `input_size` ：指定网络输入尺寸，可以指定四个维度:（B, C, H, W），也可以只指定三个维度:（C, H, W）
+
+  $\qquad \qquad \qquad$如果仅指定三个维度的尺寸（不指定batch_size），那么每一层的输出尺寸 `output shape` 都显示为 -1
 
 <br />
 

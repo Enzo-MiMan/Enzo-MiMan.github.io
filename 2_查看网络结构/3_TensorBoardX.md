@@ -51,7 +51,7 @@ add_graph(model, input_to_model=None, verbose=False, **kwargs)
 参数
 
 - `model` : 待可视化的网络模型
-- `input_to_model` : 待输入神经网络的变量或一组变量
+- `input_to_model` : 要输入网络的数据
 
 <br />
 
@@ -65,7 +65,7 @@ add_graph(model, input_to_model=None, verbose=False, **kwargs)
 tensorboard --logdir ./logs --port 6006
 ```
 
-注意：路径不要加双引号
+注意：./logs 是日志路径，路径不要加双引号
 
 在浏览器窗口输入地址：http://localhost:6006/   ， 查看模型网络结构
 
@@ -112,9 +112,11 @@ with SummaryWriter(log_dir='logs', comment='Net') as w:
     w.add_graph(model, input)
 ```
 
-![在这里插入图片描述](https://p.ipic.vip/r4y1sp.png)
 
 
+
+
+<img src="https://p.ipic.vip/ai6zrk.png" alt="image-20231009120348506" style="zoom:50%;" />
 
 
 

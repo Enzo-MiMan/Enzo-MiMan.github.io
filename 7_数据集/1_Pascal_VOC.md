@@ -1,5 +1,11 @@
 ![image-20230928145244161](https://p.ipic.vip/f17v5p.png)
 
+
+
+b站视频 ：https://www.bilibili.com/video/BV18s4y1v7FN/
+
+<br />
+
 ## 1、简介
 
 PASCAL 全称：Pattern Analysis, Statical Modeling and Computational Learning
