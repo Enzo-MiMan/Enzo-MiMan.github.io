@@ -4,7 +4,7 @@ b站视频 ：https://www.bilibili.com/video/BV1zu4y1i7Bk
 
 
 
-## nn.Sequential、nn.Module、nn.List_ModuleDict <!-- {docsify-ignore} -->
+## nn.Sequential、nn.Module、nn.List_ModuleDict  <!-- {docsify-ignore} -->
 
 <br />
 
