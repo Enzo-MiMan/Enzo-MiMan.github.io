@@ -26,14 +26,13 @@
     * [数据预处理、数据增强.md ](/3_数据读取与处理/1_数据预处理与数据增强.md)
     * [torchvision.transforms 的使用 ](/3_数据读取与处理/2_transforms的使用.md)
     * [重写_transforms.md ](/3_数据读取与处理/3_重写_transforms.md)
-    * [Dataset 与 DataLoader ](/3_数据读取与处理/1_datasets.md)
+    * [Dataset 与 DataLoader ](/3_数据读取与处理/4_Dataset、DataLoader.md)
     * [DataLoader 参数详解 ](/3_数据读取与处理/5_DataLoader参数详解.md)
 * 优化器 与 学习率 
-    * 优化器
-    * [不同层设置不同学习率](/basicKnowledge/不同层设置不同学习率.md)
-    * 学习率调度器（待）
-    * 优化器与学习率（待）
-    * warm up（待）
+    * 优化器（待）
+    * [学习率 与 warm up 策略](/4_优化器与学习率/2_学习率_warmup策略.md)
+    * [自定义学习率调度器](/4_优化器与学习率/3_自定义学习率调度器.md)
+    * [不同层设置不同学习率](/4_优化器与学习率/4_不同层设置不同学习率.md)
 * 训练日志
 
     * [logging（待）](/basicKnowledge/1_logging.md)
