@@ -2,11 +2,14 @@ b站视频 ：https://www.bilibili.com/video/BV1Bh4y1V7Sd
 
 ----
 
-## register_buffer、register_parameter <!-- {docsify-ignore} -->
+
+
+# register_buffer、register_parameter <!-- {docsify-ignore} -->
 
 
 
 ## 1、register_parameter()
+
 register_parameter() 是 torch.nn.Module 类中的一个方法
 
 
@@ -68,11 +71,14 @@ for key, val in net.state_dict().items():
     print(key, val.shape) 作者：Enzo_Mi https://www.bilibili.com/read/cv25270794/ 出处：bilibili
 ```
 
----
+<br />
 
 <br />
 
+
+
 ## 2、register_buffer()
+
 register_buffer()是 torch.nn.Module() 类中的一个方法
 
 

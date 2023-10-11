@@ -14,6 +14,11 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      name: 'Enzo的学习课件',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      coverpage: true,
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: 'auto',
@@ -21,17 +26,13 @@
         noData: '找不到结果!',
         depth: 2
       },
-      name: 'Enzo的学习课件',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      coverpage: true,
       busuanzi: true,
-      // toc: {
-      // scope: '.markdown-section',
-      // headings: 'h1, h2, h3, h4, h5, h6',
-      // title: '内容',
-      // },
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      }
       // ads: [
       //   {
       //     img: 'https://p.ipic.vip/y56e0l.jpg',
@@ -42,12 +43,6 @@
       //     href: 'https://curl.qcloud.com/VeVvGGcA'
       //   },
       // ],
-      count:{
-        countable:true,
-        fontsize:'0.9em',
-        color:'rgb(90,90,90)',
-        language:'chinese'
-      }
     }
 
   </script>
@@ -59,7 +54,8 @@
   <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
 
   <!-- latex -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>s
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
 
   <!-- 图像缩放 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
@@ -70,16 +66,11 @@
   <!-- python 内联代码 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
 
-  <!-- 目录折叠 -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
-
   <!-- busuanzi统计 -->
   <script src="https://unpkg.com/docsify-busuanzi@1.0.1/dist/docsify-busuanzi.min.js"></script>
 
   <!-- ads -->
   <!-- <script src="https://unpkg.com/docsify-ads@1.0.4/dist/docsify-ads.min.js"></script> -->
-  
-
 </body>
 </html>
 

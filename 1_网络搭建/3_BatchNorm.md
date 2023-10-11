@@ -6,11 +6,11 @@ Axure课件：https://rmt0w2.axshare.com/?g=1&id=6q1by1&p=bn&sc=3
 
 
 
-## BatchNormlization <!-- {docsify-ignore} -->
+# BatchNormlization <!-- {docsify-ignore} -->
 
 
 
-### 1、作用
+## 1、作用
 
 
 
@@ -20,7 +20,7 @@ Axure课件：https://rmt0w2.axshare.com/?g=1&id=6q1by1&p=bn&sc=3
 
 <br />
 
-### 2、计算方式
+## 2、计算方式
 
 ![image-20231009150829589](https://p.ipic.vip/pn83n9.png)
 
@@ -28,7 +28,7 @@ Axure课件：https://rmt0w2.axshare.com/?g=1&id=6q1by1&p=bn&sc=3
 
 <br />
 
-### 3、查看BN 层中的参数数量
+## 3、查看BN 层中的参数数量
 
 BN层中有 weight 和 bias 两个参数（也就是上面计算方式 中的 gamma 和 beta）
 
@@ -46,7 +46,9 @@ BN层中有 weight 和 bias 两个参数（也就是上面计算方式 中的 ga
 
 <br />
 
-### 4、验证阶段 / 测试阶段的Batch Normalization
+
+
+## 4、验证阶段 / 测试阶段的Batch Normalization
 
 ![image-20231009151646182](https://p.ipic.vip/rj3j5n.png)
 
@@ -108,7 +110,7 @@ print('bn.running_var : ', bn.running_var)
 
 <br />
 
-### 5、模型中BN层的使用节点
+## 5、模型中BN层的使用节点
 
 <img src="https://p.ipic.vip/0ihuwm.png" alt="image-20231009154817274" style="zoom:50%;" />
 
@@ -118,6 +120,6 @@ print('bn.running_var : ', bn.running_var)
 
 <br />
 
-### 6、BN层对卷积层的影响
+## 6、BN层对卷积层的影响
 
 ![image-20231009154914345](https://p.ipic.vip/wpbu3x.png)
