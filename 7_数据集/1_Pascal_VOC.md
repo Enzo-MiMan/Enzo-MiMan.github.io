@@ -180,9 +180,7 @@ Pascal VOC 2012
 
 [官网地址](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/dbstats.html)
 
-<img src="https://p.ipic.vip/h9gtw1.png" alt="5591695878991_.pic" style="zoom:33%;" style="left"/>
-
-
+![image-20231010094144165](https://p.ipic.vip/p51wg6.png)
 
 
 
@@ -190,7 +188,9 @@ Pascal VOC 2012
 
 [官网地址](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/dbstats.html)
 
-<img src="https://p.ipic.vip/3rn7u1.png" alt="5601695879070_.pic" style="zoom:33%;" style="left"/>
+![image-20231010094423613](https://p.ipic.vip/5ty3uw.png)
+
+
 
 ----
 
@@ -683,12 +683,3 @@ $$\quad$$
 
  说明：.xml 文件中有 5个 object， 其中2个difficult=1， 没有被转存出来
 
-
-
-----
-
-
-
-## 10、Reference
-
-https://arleyzhang.github.io/articles/1dc20586/

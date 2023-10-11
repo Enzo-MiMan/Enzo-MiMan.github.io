@@ -4,6 +4,8 @@ b站视频 ：https://www.bilibili.com/video/BV1GT411W7ji
 
 <br />
 
+
+
 ## 1、简介
 
 MS COCO ：Microsoft Common Objects in Context
@@ -58,19 +60,13 @@ MS COCO ：Microsoft Common Objects in Context
 
 官网下载地址：https://cocodataset.org/#download
 
-或者，直接点击如下链接直接下载
+或者，直接点击如下链接直接下载 ： 
 
-| 目标检测任务语义分割任务实例分割任务（以上3个任务使用相同数据文件） | 2014 数据集                                                  | 训练数据集                                                   |      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| 验证数据集                                                   |                                                              |                                                              |      |
-| 标注文件                                                     |                                                              |                                                              |      |
-| 2017 数据集                                                  | 训练数据集                                                   | [2017 Train images [118K/18GB\]](http://images.cocodataset.org/zips/train2017.zip) |      |
-| 验证数据集                                                   | [2017 Val images [5K/1GB\]](http://images.cocodataset.org/zips/val2017.zip) |                                                              |      |
-| 标注文件                                                     | [2017 Train/Val annotations [241MB\]](http://images.cocodataset.org/annotations/annotations_trainval2017.zip) |                                                              |      |
+- 2017 - 训练数据集 ： [2017 Train images [118K/18GB\]](http://images.cocodataset.org/zips/train2017.zip)
 
+- 2017 - 验证数据集： [2017 Val images [5K/1GB\]](http://images.cocodataset.org/zips/val2017.zip)
 
-
-
+- 2017 - 标注文件 ： [2017 Train/Val annotations [241MB\]](http://images.cocodataset.org/annotations/annotations_trainval2017.zip)
 
 
 

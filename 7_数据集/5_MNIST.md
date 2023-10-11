@@ -1,5 +1,7 @@
 
 
+# MNIST 数据集 <!-- {docsify-ignore} -->
+
 **mnist 全称：mixed national institute of standards and technology database**
 
 
