@@ -6,7 +6,7 @@ b站视频 ：https://www.bilibili.com/video/BV1pL411f7JB
 
 
 
-# 重写 transforms <!-- {docsify-ignore} -->
+# 重写 torchvision.transforms <!-- {docsify-ignore} -->
 
 
 
