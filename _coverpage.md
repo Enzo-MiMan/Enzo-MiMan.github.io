@@ -4,7 +4,7 @@
 
 
 
-# Enzo 的学习课件
+# Enzo 的学习课件$\;$ <img src="_media/dinosaur.png" width="30">
 
 > 《深度学习基础 - Pytorch》
 
