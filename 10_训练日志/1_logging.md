@@ -132,8 +132,8 @@ test_batch_size = 32
 transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
 
 # 下载数据 & 导入数据
-train_set = mnist.MNIST("/Users/enzo/Documents/GitHub/dataset", train=True, download=True, transform=transform)
-test_set = mnist.MNIST("/Users/enzo/Documents/GitHub/dataset", train=False, transform=transform)
+train_set = mnist.MNIST("./", train=True, download=True, transform=transform)
+test_set = mnist.MNIST("./", train=False, transform=transform)
 
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=train_batch_size, shuffle=True)
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=test_batch_size, shuffle=False)
