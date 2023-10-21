@@ -80,7 +80,7 @@ logging.basicConfig(
 - format：日志输出格式，相关格式化串如下：
 
 ```
-% (name)s           Logger的名字(get1ogger时指定的名字）
+%(name)s           Logger的名字(get1ogger时指定的名字）
 %(levelno)d         数字形式的日志级别
 %(levelname)s       文本形式的日志级别
 %(pathname)s        调用日志输出位置的完整路径名
@@ -238,11 +238,19 @@ logging 采用了模块化设计，主要由四个部分组成：
 
 ​	2、Handlers ： 日志处理器，将记录的日志发送到指定的位置（终端打印 or 保存到文件）
 
-​	3、Filters ：日志过滤期，提供可更好的粒度控制，决定哪些日志被输出
+​	3、Filters ：日志过滤器，提供可更好的粒度控制，决定哪些日志被输出
 
 ​	4、Formatters ： 日志格式器，用于控制日志信息的输出格式
 
 
+
+
+
+<img src="https://p.ipic.vip/t3eskh.png" alt="image-20231020174308163" style="zoom: 50%;" />
+
+<br />
+
+<br />
 
 ### 1、记录器 Loggers
 
@@ -268,13 +276,13 @@ logger.setLevel(logging.INFO)
 
 ```py
 # 1、创建一个handler，该handler往console打印输出
-consoleHandler = logging.StreamHandler() 
-# 2、设置 consoleHandler 的日志级别为 debug
-consoleHandler.setLevel(logging.DEBUG) 
+console_handler = logging.StreamHandler() 
+# 2、设置 console_handler 的日志级别为 debug
+console_handler.setLevel(logging.DEBUG) 
 
 # 3、再创建一个handler，该handler往文件中打印输出
-# 未给fileHandler指定日志级别，它会默认使用logger 的日志级别 
-fileHandler = logging.FileHandler(filename='demo.log ') 
+# 未给file_handler指定日志级别，它会默认使用logger 的日志级别 
+file_handler = logging.FileHandler(filename='demo.log ') 
 ```
 
 
@@ -338,14 +346,14 @@ simple_formatter = logging.setFormatter('%(levelname)s %(message)s]')
 
 
 ```python
-# 让 consoleHandler 使用 标准版日志打印格式
-consoleHandler.Formatter(standard_formatter)
-# 让 fileHandler 使用 标准版日志打印格式
-fileHandler.Formatter(simple_formatter)
+# 让 console_handler 使用 标准版日志打印格式
+console_handler.setFormatter(standard_formatter)
+# 让 file_handler 使用 标准版日志打印格式
+file_handler.setFormatter(simple_formatter)
 
-# 给记录器绑定上 consoleHandler 和 fileHandler
-logger.addHandler(consoleHandler)
-logger.addHandler(fileHandler)
+# 给记录器绑定上 console_handler 和 file_handler
+logger.addHandler(console_handler)
+logger.addHandler(file_handler)
 ```
 
 
@@ -381,36 +389,44 @@ logger.critical('严重错误日志')
   ```python
   import logging
   
+  
   # ============================ 1、实例化 logger ============================
-  # 实例化一个记录器，并将记录器的名字设为 'training_log'，并将日志级别为 info
-  logger = logging.getLogger(name='training_log')
-  logger.setLevel(logging.INFO)
+  # 实例化一个记录器，使用默认记录器名称 'root'，并将日志级别设为 info
+  logger = logging.getLogger('training.loss.log')
+  logger.setLevel(logging.DEBUG)
   
   
   # ============================ 2、定义Handler ============================
-  # 创建一个往 console打印输出的 Handler，日志级别为 debug
-  consoleHandler = logging.StreamHandler() 
-  consoleHandler.setLevel(logging.DEBUG) 
-  # 再创建一个往文件中打印输出的handler， 默认使用logger 的日志级别 
-  fileHandler = logging.FileHandler(filename='demo.log ') 
+  # 创建一个往 console打印输出的 Handler，日志级别设为 debug
+  console_handler = logging.StreamHandler()
+  console_handler.setLevel(logging.DEBUG)
+  
+  # 再创建一个往文件中打印输出的handler， 默认使用记录器同样的日志级别
+  file_handler = logging.FileHandler(filename='demo.log', mode='w')
   
   
   # ============================ 3、定义打印格式 ============================
   # 创建一个标准版日志打印格式
-  standard_formatter = logging.Formatter('%(asctime)s %(name)s [%(pathname)s line:(lineno)d] %(levelname)s %(message)s]')
+  standard_formatter = logging.Formatter('%(asctime)s %(name)s [%(pathname)s line:(lineno)d] %(levelname)s %(message)s')
   
   # 创建一个简单版日志打印格式
-  simple_formatter = logging.Formatter('%(levelname)s %(message)s]')
+  simple_formatter = logging.Formatter('%(levelname)s %(message)s')
+  
+  # ============================ 4、定义过滤器 ============================
+  flt = logging.Filter('training.loss')
   
   # ============================ 4、绑定 ============================
   # 让 consoleHandler 使用 标准版日志打印格式
-  consoleHandler.setFormatter(standard_formatter)
-  # 让 fileHandler 使用 标准版日志打印格式
-  fileHandler.setFormatter(simple_formatter)
+  console_handler.setFormatter(standard_formatter)
+  
+  # 让 fileHandler 使用 简版日志打印格式
+  file_handler.setFormatter(simple_formatter)
   
   # 给记录器绑定上 consoleHandler 和 fileHandler
-  logger.addHandler(consoleHandler)
-  logger.addHandler(fileHandler)
+  logger.addHandler(console_handler)
+  logger.addHandler(file_handler)
+  
+  logger.addFilter(flt)
   
   # ============================ 5、打印 ============================
   logger.debug('调试日志')
@@ -419,13 +435,165 @@ logger.critical('严重错误日志')
   logger.error('错误日志 ')
   logger.critical('严重错误日志')
   
+  
+  
   ```
 
 
 
+<br />
+
+<br />
+
+### 7、实例演示
+
+```python
+import time
+import os
+import numpy as np
+import torch
+import torch.nn as nn
+from torchvision.datasets import mnist
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+import torch.optim as optim
+import matplotlib.pyplot as plt
+import logging
+
+
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+train_batch_size = 16
+test_batch_size = 32
+transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+
+# 下载数据 & 导入数据
+train_set = mnist.MNIST("./", train=True, download=True, transform=transform)
+test_set = mnist.MNIST("./", train=False, transform=transform)
+
+train_loader = torch.utils.data.DataLoader(train_set, batch_size=train_batch_size, shuffle=True)
+test_loader = torch.utils.data.DataLoader(test_set, batch_size=test_batch_size, shuffle=False)
+
+# # 抽样查看图片
+# examples = enumerate(train_loader)
+# batch_index, (example_data, example_label) = next(examples)
+# print(type(example_data))   # <class 'torch.Tensor'>
+# print(example_data.shape)   # torch.Size([64, 1, 28, 28])
+
+# for i in range(6):
+#     plt.subplot(2, 3, i+1)
+#     plt.tight_layout()
+#     plt.imshow(example_data[i][0], cmap='gray')
+#     plt.title("Ground Truth: {}".format(example_label[i]))
+#     plt.xticks([])
+#     plt.yticks([])
+# plt.show()
+
+
+def create_logger():
+    # ============================ 1、实例化 logger ============================
+    # 实例化一个记录器，并将记录器的名字设为 'training_log'，并将日志级别为 info
+    logger = logging.getLogger(name='training_log')
+    logger.setLevel(logging.INFO)
+
+    # ============================ 2、定义Handler ============================
+    # 创建一个往 console打印输出的 Handler，日志级别为 debug
+    consoleHandler = logging.StreamHandler()
+
+    # 再创建一个往文件中打印输出的handler
+    fileHandler = logging.FileHandler(filename='mnist.log', mode='w')
+
+    # ============================ 3、定义打印格式 ============================
+
+    simple_formatter = logging.Formatter('%(message)s')
+
+    # ============================ 4、绑定 ============================
+    # 让 consoleHandler 使用 简单版日志打印格式
+    consoleHandler.setFormatter(simple_formatter)
+    # 让 fileHandler 使用 简单版日志打印格式
+    fileHandler.setFormatter(simple_formatter)
+
+    # 给记录器绑定上 consoleHandler 和 fileHandler
+    logger.addHandler(consoleHandler)
+    logger.addHandler(fileHandler)
+    return logger
+
+
+class LeNet5(nn.Module):
+    """ 使用sequential构建网络，Sequential()函数的功能是将网络的层组合到一起 """
+    def __init__(self, in_channel, output):
+        super(LeNet5, self).__init__()
+        self.layer1 = nn.Sequential(nn.Conv2d(in_channels=in_channel, out_channels=6, kernel_size=5, stride=1, padding=2),   # (6, 28, 28)
+                                    nn.Tanh(),
+                                    nn.AvgPool2d(kernel_size=2, stride=2, padding=0))   # (6, 14, 14))
+        self.layer2 = nn.Sequential(nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, stride=1, padding=0),  # (16, 10, 10)
+                                    nn.Tanh(),
+                                    nn.AvgPool2d(kernel_size=2, stride=2, padding=0))   # (16, 5, 5)
+        self.layer3 = nn.Conv2d(in_channels=16, out_channels=120, kernel_size=5)  # (120, 1, 1)
+        self.layer4 = nn.Sequential(nn.Linear(in_features=120, out_features=84),
+                                    nn.Tanh(),
+                                    nn.Linear(in_features=84, out_features=output))
+
+    def forward(self, x):
+        x = self.layer1(x)
+        x = self.layer2(x)
+        x = self.layer3(x)
+        x = torch.flatten(input=x, start_dim=1)
+        x = self.layer4(x)
+        return x
+
+
+model = LeNet5(1, 10)
+model.to(device)
+
+logger = create_logger()
+print(logger)
+
+lr = 0.01
+num_epoches = 20
+momentum = 0.8
+
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)
+
+
+for epoch in range(num_epoches):
+    logger.info("epoch ：{}".format(epoch))
+
+
+    if epoch % 5 == 0:
+        optimizer.param_groups[0]['lr'] *= 0.1
+
+    model.train()
+    for i, (imgs, labels) in enumerate(train_loader):
+        imgs, labels = imgs.to(device), labels.to(device)
+        predict = model(imgs)
+        loss = criterion(predict, labels)
+
+        # back propagation
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        # accurate rate
+        result = torch.argmax(predict, dim=1)
+        acc_num = (result == labels).sum().item()
+        acc_rate = acc_num / imgs.shape[0]
+
+        if i % 200 == 0:
+            logger.info('loss : {}'.format(loss.item()))
+            logger.info('acc_rate : {:.3f}'.format(acc_rate))
+
+
+```
 
 
 
+
+
+<br />
+
+<br />
 
 ## 三、通过配置文件处理日志
 
@@ -436,42 +604,42 @@ logger.critical('严重错误日志')
 keys=root,loss,accurate
 
 [handlers]
-keys=consoleHandler,lossFileHandler,accFileHandler
+keys=console_handler,lossfile_handler,accfile_handler
 
 [formatters]
 keys=simpleFormatter
 
 [logger_root]
 level=INFO
-handlers=consoleHandler
+handlers=console_handler
 qualname=root_log
 
 [logger_loss]
 level=INFO
-handlers=lossFileHandler
+handlers=lossfile_handler
 qualname=loss_log
 propagate = 0
 
 [logger_accurate]
 level=INFO
-handlers=accFileHandler
+handlers=accfile_handler
 qualname=accurate_log
 propagate = 0
 
-[handler_consoleHandler]
+[handler_console_handler]
 class=StreamHandler
 args=(sys.stdout,)
 level=INFO
 formatters=simpleFormatter
 
-[handler_lossFileHandler]
-class=FileHandler
+[handler_lossfile_handler]
+class=file_handler
 args=("loss.log", 'w')
 level=INFO
 formatters=simpleFormatter
 
-[handler_accFileHandler]
-class=FileHandler
+[handler_accfile_handler]
+class=file_handler
 args=("acc_rate.log", 'w')
 level=INFO
 formatters=simpleFormatter
