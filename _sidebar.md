@@ -42,10 +42,10 @@
     * [语义分割损失函数（待）]()
 * 训练日志
 
-    * [logging](/10_训练日志/1_logging.md)
-    * [TensorboardX（待）](/10_训练日志/2_Tensorboard.md)
-    * [MetricLogger（待）](/10_训练日志/3_MatricLogger.md)
-    * [wandb（待）](/10_训练日志/4_wand.md)
+    * [logging](/6_训练日志/1_logging.md)
+    * [TensorboardX（待）](/6_训练日志/2_Tensorboard.md)
+    * [MetricLogger（待）](/6_训练日志/3_MatricLogger.md)
+    * [wandb（待）](/6_训练日志/4_wand.md)
 * 迁移学习
     * 获取预训练模型获取（待）
     * 模型部分组装（待）
