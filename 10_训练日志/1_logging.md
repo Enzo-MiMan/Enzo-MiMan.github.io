@@ -597,57 +597,73 @@ for epoch in range(num_epoches):
 
 ## 三、通过配置文件处理日志
 
+<br />
+
+
+
+<img src="https://p.ipic.vip/5h5jkk.png" alt="image-20231022102949681" style="zoom:50%;" />
+
+<br />
+
 配置文件 ` log.conf` 
 
 ```python
 [loggers]
-keys=root,loss,accurate
+keys=root, logger01
 
 [handlers]
-keys=console_handler,lossfile_handler,accfile_handler
+keys=console_handler,file_handler
 
 [formatters]
-keys=simpleFormatter
+keys=standard_formatter,simple_formatter
 
 [logger_root]
+level=DEBUG
+
+[logger_logger01]
 level=INFO
 handlers=console_handler
-qualname=root_log
-
-[logger_loss]
-level=INFO
-handlers=lossfile_handler
-qualname=loss_log
-propagate = 0
-
-[logger_accurate]
-level=INFO
-handlers=accfile_handler
-qualname=accurate_log
-propagate = 0
+qualname=mylogger
+propagate=0
 
 [handler_console_handler]
 class=StreamHandler
 args=(sys.stdout,)
-level=INFO
-formatters=simpleFormatter
+formatters=standard_formatter
 
-[handler_lossfile_handler]
-class=file_handler
-args=("loss.log", 'w')
-level=INFO
-formatters=simpleFormatter
+[handler_file_handler]
+level=DEBUG
+class=FileHandler
+args=("demo.log", 'w')
+formatters=simple_formatter
 
-[handler_accfile_handler]
-class=file_handler
-args=("acc_rate.log", 'w')
-level=INFO
-formatters=simpleFormatter
+[formatter_standard_formatter]
+format=%(asctime)s %(name)s [%(pathname)s line:(lineno)d] %(levelname)s %(message)s
 
-[formatter_simpleFormatter]
-format=%(message)s
-
+[formatter_simple_formatter]
+format=%(levelname)s %(message)s
 ```
 
+demo.py
 
+```python
+import logging.config
+
+logging.config.fileConfig('demo.conf')
+
+root_logger = logging.getLogger()
+my_logger = logging.getLogger('mylogger')
+
+root_logger.debug('调试日志')
+root_logger.info('消息日志')
+root_logger.warning('警告日志')
+root_logger.error('错误日志 ')
+root_logger.critical('严重错误日志')
+
+my_logger.debug('调试日志')
+my_logger.info('消息日志')
+my_logger.warning('警告日志')
+my_logger.error('错误日志 ')
+my_logger.critical('严重错误日志')
+```
 
