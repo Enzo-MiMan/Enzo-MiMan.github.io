@@ -643,13 +643,13 @@ propagate=0
 [handler_console_handler]
 class=StreamHandler
 args=(sys.stdout,)
-formatters=standard_formatter
+formatter=standard_formatter
 
 [handler_file_handler]
 level=DEBUG
 class=FileHandler
 args=("demo.log", 'w')
-formatters=simple_formatter
+formatter=simple_formatter
 
 [formatter_standard_formatter]
 format=%(asctime)s %(name)s [%(pathname)s line:(lineno)d] %(levelname)s %(message)s
