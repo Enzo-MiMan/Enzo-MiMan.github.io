@@ -633,6 +633,7 @@ keys=standard_formatter,simple_formatter
 
 [logger_root]
 level=DEBUG
+handlers=file_handler
 
 [logger_logger01]
 level=INFO
