@@ -1,8 +1,16 @@
 
 
+b站视频 ：
+
+（一）安装与登录 ：https://www.bilibili.com/video/BV1Cu4y1a7qD
+
+（二）基础使用与可视化： https://www.bilibili.com/video/BV1694y1G7dy
 
 
 
+
+
+----
 
 
 
