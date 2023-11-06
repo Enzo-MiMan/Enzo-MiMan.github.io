@@ -311,13 +311,13 @@ wandb.watch(model, log="gradients", log_freq=1000, log_graph=False)
 
 - log：要记录的指标。可以是 "gradients"、"parameters"、"all" 或 None， 默认值为 "gradients"
 
-  <img src="/Users/enzo/Downloads/w94ecx.png" alt="image-20231105185220252" style="zoom:50%;" />
+  <img src="https://p.ipic.vip/xtxdnd.png" alt="image-20231105185220252" style="zoom:50%;" />
 
 - log_freq：记录指标的频率，默认值为 1000
 
 - log_graph：是否记录模型的图形，默认为 "False"
 
-![image-20231105210155555](/Users/enzo/Downloads/i3sblo.png)
+![image-20231105210155555](https://p.ipic.vip/uxi1of.png)
 
 
 
