@@ -335,7 +335,7 @@ wandb.watch(model, log="gradients", log_freq=1000, log_graph=False)
 
 #### 6）wandb.Artifact()
 
-版本管理、保存文件
+**版本管理、保存文件**
 
 ```python
 # 将模型参数保存为本地 .pth 文件
@@ -361,7 +361,7 @@ wandb.log_artifact(artifact)
 
 
 
-读取文件
+**读取文件**
 
 ```python
 import wandb
