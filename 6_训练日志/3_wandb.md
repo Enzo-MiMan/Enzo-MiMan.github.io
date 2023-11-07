@@ -325,7 +325,7 @@ wandb.watch(model, log="gradients", log_freq=1000, log_graph=False)
 
 
 
-代码 ： 
+代码 ： https://github.com/Enzo-MiMan/cv_related_collections/blob/main/deep_learning_basic/wandb/wandb_watch.py
 
 <br />
 
@@ -335,26 +335,42 @@ wandb.watch(model, log="gradients", log_freq=1000, log_graph=False)
 
 #### 6）wandb.Artifact()
 
-保存文件
+版本管理、保存文件
 
 ```python
-artifact = wandb.Artifact('lenet5-mnist', type='xxx')
-artifact.add_dir('./MNIST')
-artifact.add_file('./demo2.py')
-artifact.add_file('./lenet5.pth')
+# 将模型参数保存为本地 .pth 文件
+torch.save(model.state_dict(), "lenet5.pth")
+
+# 创建 artifact 对象
+artifact = wandb.Artifact(name='lenet5-mnist', type='project')
+
+# 通过对象, 向版本中添加 数据文件、代码文件 和 参数文件
+artifact.add_dir('./MNIST')   # 添加文件夹
+artifact.add_file('./wandb_artifact.py')   # 添加文件
+artifact.add_file('./lenet5.pth')   # 添加文件
+
+# 上传对象(包括代码文件 和 参数文件)
 wandb.log_artifact(artifact)
 ```
+
+![image-20231106221725348](https://p.ipic.vip/tnteco.png)
+
+![image-20231107184617992](https://p.ipic.vip/g063fn.png)
+
+
+
+
 
 读取文件
 
 ```python
-artifact = wandb.use_artifact("lenet5-mnist:v0")
-model_dir = artifact.download()   # './artifacts/lenet5-mnist:v0'
-model_path = os.path.join(model_dir, "lenet5.pth")
-model.load_state_dict(torch.load(model_path))
+import wandb
+run = wandb.init()
+artifact = run.use_artifact('enzo-mi0911/LeNet5/lenet5-mnist:v2', type='xxx')
+artifact_dir = artifact.download()
 ```
 
-
+![image-20231107184544114](https://p.ipic.vip/30uhfa.png)
 
 <br />
 
