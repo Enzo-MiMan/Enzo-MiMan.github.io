@@ -53,6 +53,7 @@
 * 必备技能
     * [命令行参数解析 argparse](/7_必备技能/1_argparse.md)
     * [环境搭建 - requirement.txt](/7_必备技能/2_requirement.md)
+    * [Linux常用命令](/7_必备技能/4_Linux.md)
 * 基础算法
 
     * [插值算法](/8_基础算法/1_插值算法.md)
