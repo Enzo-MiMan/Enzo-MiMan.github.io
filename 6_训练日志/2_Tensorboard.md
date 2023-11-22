@@ -1,21 +1,27 @@
+# 日志记录 - tensorboard / tensorboardX <!-- {docsify-ignore} -->
+
+
+
 
 
 ## 1、实例化 SummaryWriter 类
 
 ```python
-from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
+# from tensorboardX import SummaryWriter
 
-# 提供一个路径，将使用该路径来保存日志
-writer1 = SummaryWriter(log_dir='./runs')
-
-# 无参数，默认使用 runs/日期时间 路径来保存日志，比如：'runs/Aug20-17-20-33'
-writer2 = SummaryWriter()
-
-# 提供一个 comment 参数，将使用 runs/日期时间-comment 路径来保存日志，比如： 'runs/Aug20-17-20-33-resnet'
-writer3 = SummaryWriter(comment='_resnet')
+writer = SummaryWriter(log_dir="./runs/version1", comment='_resnet')
 ```
 
----
+参数：
+
+- `log_dir` ：保存日志文件的路径。 
+  - 如果不指定，则将使用默认路径 `"runs/CURRENT_DATETIME_HOSTNAME"` ， 类似`"Nov22_17-54-55_EnzodeMBP_resnet"`
+  - 若指定，则使用指定的路径作为日志路径
+
+- `comment` ： 指定日志文件夹名称后缀，类似 `"runs/Aug20-17-20-33_resnet"`
+
+
 
 <br />
 
@@ -180,6 +186,7 @@ add_image(tag, img_tensor, global_step=None, walltime=None, dataformats='CHW')
 from tensorboardX import SummaryWriter
 from PIL import Image
 import numpy as np
+import os
 
 
 file_name = ['image1', 'image2', 'image3']

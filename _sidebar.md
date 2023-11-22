@@ -43,7 +43,7 @@
 * 训练日志
 
     * [logging](/6_训练日志/1_logging.md)
-    * [TensorboardX](/6_训练日志/2_TensorboardX.md)
+    * [Tensorboard](/6_训练日志/2_Tensorboard.md)
     * [wandb](/6_训练日志/3_wandb.md)
 * 迁移学习
     * 获取预训练模型获取（待）
