@@ -43,9 +43,8 @@
 * 训练日志
 
     * [logging](/6_训练日志/1_logging.md)
-    * [TensorboardX（待）](/6_训练日志/2_Tensorboard.md)
+    * [TensorboardX](/6_训练日志/2_TensorboardX.md)
     * [wandb](/6_训练日志/3_wandb.md)
-    * [MetricLogger（待）](/6_训练日志/3_MatricLogger.md)
 * 迁移学习
     * 获取预训练模型获取（待）
     * 模型部分组装（待）
@@ -54,6 +53,7 @@
     * [命令行参数解析 argparse](/7_必备技能/1_argparse.md)
     * [环境搭建 - requirement.txt](/7_必备技能/2_requirement.md)
     * [Linux常用命令](/7_必备技能/4_Linux.md)
+    * [进度条tqdm](/7_必备技能/5_进度条tqdm.md)
 * 基础算法
 
     * [插值算法](/8_基础算法/1_插值算法.md)
