@@ -8,20 +8,24 @@
 
 ```python
 from torch.utils.tensorboard import SummaryWriter
-# from tensorboardX import SummaryWriter
 
-writer = SummaryWriter(log_dir="./runs/version1", comment='_resnet')
+# 不指定任何参数，默认日志路径为, "runs/CURRENT_DATETIME_HOSTNAME"
+writer = SummaryWriter()
+
+# 通过参数 log_dir 指定日志路径
+writer = SummaryWriter(log_dir="./runs/version1")
+
+# 通过参数 comment 指定日志路径名称后缀， 与参数log_dir 同时使用，不起作用
+writer = SummaryWriter(comment="_resnet")
 ```
 
 参数：
 
 - `log_dir` ：保存日志文件的路径。 
-  - 如果不指定，则将使用默认路径 `"runs/CURRENT_DATETIME_HOSTNAME"` ， 类似`"Nov22_17-54-55_EnzodeMBP_resnet"`
+  - 如果不指定，则将使用默认路径 `"runs/CURRENT_DATETIME_HOSTNAME"` ， 类似`"Nov22_17-54-55_EnzodeMBP"`
   - 若指定，则使用指定的路径作为日志路径
 
-- `comment` ： 指定日志文件夹名称后缀，类似 `"runs/Aug20-17-20-33_resnet"`
-
-
+- `comment` ： 指定日志文件夹名称后缀，类似 `"runs/Aug20-17-20-33_resnet"`；  与参数log_dir 同时使用，不起作用
 
 <br />
 
@@ -29,19 +33,17 @@ writer = SummaryWriter(log_dir="./runs/version1", comment='_resnet')
 
 ## 2、使用各种 add 方法记录数据
 
-### 1）使用 add_scalar 记录数字常量（可视化损失值）
+### 1）使用 add_scalar 记录数字常量
 
 ```bash
-add_scalar(tag, scalar_value, global_step=None, walltime=None)
+writer.add_scalar(tag, scalar_value, global_step=None, walltime=None)
 ```
 参数：
-- tag : (string) 数据名称，类似 excel 中 sheet 名称
+- tag : (string) 数据图表名称
 - scalar_value :  (float) 需要记录的数据，通常在图表中作为 y轴的数据
 
-- global_step : (int, optional) 训练的 step，每调用一次 add_scalar，记为一个 step； 通常在图表中作为 x轴的数据
-- walltime : (float, optional) 记录产生的时间，默认为 time.time()
-
-<mark>注意 ： 参数 scalar_value 一定是 float 类型，如果是 tensor，则需要调用 .item() 方法获取其数值。</mark>
+- global_step : (int, optional) 训练的 step，通常在图表中作为 x轴的数据
+- walltime : (float, optional) 记录生成的时间，默认为 time.time()
 
 
 
@@ -116,7 +118,7 @@ print('done')
 ### 2）使用 add_graph 记录模型结构（计算图）
 
 ```python
-add_graph(model, input_to_model=None, verbose=False, **kwargs)
+writer.add_graph(model, input_to_model=None, verbose=False, **kwargs)
 ```
 参数
 - model : 待可视化的网络模型
@@ -171,7 +173,7 @@ with SummaryWriter(log_dir='runs', comment='Net') as w:
 ### 3）使用 add_image 记录图像
 
 ```python
-add_image(tag, img_tensor, global_step=None, walltime=None, dataformats='CHW')
+writer.add_image(tag, img_tensor, global_step=None, walltime=None, dataformats='CHW')
 ```
 参数
 - tag (string): 数据名称
