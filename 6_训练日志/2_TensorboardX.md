@@ -29,14 +29,21 @@ writer3 = SummaryWriter(comment='_resnet')
 add_scalar(tag, scalar_value, global_step=None, walltime=None)
 ```
 参数：
-- tag (string): 数据名称，有点像是 excel 表中 sheet 的名称
-- scalar_value (float): 数字常量值；图表展示时，会作为 y轴 的值
-- global_step (int, optional): 训练的 step；图表展示时，会作为 x轴 的值
-- walltime (float, optional): 记录发生的时间，默认为 time.time()
+- tag : (string) 数据名称，类似 excel 中 sheet 名称
+- scalar_value :  (float) 需要记录的数据，通常在图表中作为 y轴的数据
 
-需要注意，这里的 scalar_value 一定是 float 类型，如果是 PyTorch scalar tensor，则需要调用 .item() 方法获取其数值。我们一般会使用 add_scalar 方法来记录训练过程的 loss、accuracy、learning rate 等数值的变化，直观地监控训练过程。
+- global_step : (int, optional) 训练的 step，每调用一次 add_scalar，记为一个 step； 通常在图表中作为 x轴的数据
+- walltime : (float, optional) 记录产生的时间，默认为 time.time()
 
-举例
+<mark>注意 ： 参数 scalar_value 一定是 float 类型，如果是 tensor，则需要调用 .item() 方法获取其数值。</mark>
+
+
+
+我们一般会使用 add_scalar 方法来记录训练过程的 loss、accuracy 等数值的变化，直观地监控训练过程。
+
+
+
+例 1
 
 ```bash
 from tensorboardX import SummaryWriter
@@ -46,10 +53,15 @@ for i in range(10):
     writer.add_scalar('quadratic', i**2, global_step=i)
     writer.add_scalar('exponential', 2**i, global_step=i)
 
+# 查看方式
+# step 1 ： cd 到生成的 runs 同级目录下
+# step 2 ： 在终端输入 tensorboard --logdir ./runs --port 6006
+# step 3 ： 再浏览器中输入地址： http://localhost:6006/ 
+
 ```
 <img src="https://p.ipic.vip/gbs3z4.png" alt="在这里插入图片描述" style="zoom: 50%;" />
 
-另一个例子
+例 2
 
 ```python
 import numpy as np
@@ -58,7 +70,7 @@ import torch.optim
 import matplotlib.pyplot as plt
 from tensorboardX import SummaryWriter
 
-writer = SummaryWriter(log_dir='logs', comment='Linear')
+writer = SummaryWriter(log_dir='runs', comment='Linear')
 np.random.seed(100)
 
 x_train = np.linspace(-1, 1, 100).reshape(100, 1)
@@ -138,7 +150,7 @@ class Net(nn.Module):
 input = torch.rand(32, 1, 28, 28)
     
 model = Net()
-with SummaryWriter(log_dir='logs', comment='Net') as w:
+with SummaryWriter(log_dir='runs', comment='Net') as w:
     w.add_graph(model, input)
         
 ```
@@ -170,7 +182,7 @@ from PIL import Image
 import numpy as np
 
 
-file_name = ['0a0b97441050bba8e733506de4655ea1', '00a3edd22dc7859c487a64777fc8d093', '0a5b12a0f9fe595d6db6ee36b43725df']
+file_name = ['image1', 'image2', 'image3']
 file_list = [os.path.join('./test_images', i+'.jpg') for i in file_name]
 writer = SummaryWriter('runs/image_example')
 for i in range(0, 3):
@@ -197,11 +209,13 @@ add_image 方法只能一次插入一张图片。如果要一次性插入多张�
 
 ## 3、浏览器查看结果
 
-在终端 cd 到 logs目录所在的同级目录，输入如下命令
+step 1 ： 在终端 cd 到 runs 目录所在的同级目录，
+
+step 2 ： 输入如下命令 ， <mark>注意：路径不要加双引号</mark>
 
 ```
-tensorboard --logdir ./logs --port 6006
+tensorboard --logdir ./runs --port 6006
 ```
-<mark>注意：路径不要加双引号</mark>
 
-在浏览器窗口输入地址：http://localhost:6006/
+
+step 3：在浏览器窗口输入地址：http://localhost:6006/
