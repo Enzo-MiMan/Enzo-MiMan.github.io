@@ -119,11 +119,12 @@ print('done')
 ### 2）使用 add_graph 记录模型结构（计算图）
 
 ```python
-writer.add_graph(model, input_to_model=None, verbose=False, **kwargs)
+writer.add_graph(model, input_to_model=None, verbose=False)
 ```
 参数
 - model : 待可视化的网络模型
 - input_to_model : 待输入神经网络的变量或一组变量
+- verbose : 是否在控制台中打印图形结构
 
 举例
 ```python
@@ -177,7 +178,7 @@ with SummaryWriter(log_dir='runs', comment='Net') as w:
 writer.add_image(tag, img_tensor, global_step=None, walltime=None, dataformats='CHW')
 ```
 参数
-- tag (string): 数据名称
+- tag (string): 图像窗口名称
 - img_tensor (torch.Tensor / numpy.array): 图像数据
 - global_step (int, optional): 训练的 step
 - walltime (float, optional): 记录发生的时间，默认为 time.time()
