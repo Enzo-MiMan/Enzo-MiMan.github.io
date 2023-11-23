@@ -60,6 +60,7 @@ writer = SummaryWriter('runs/scalar_example')
 for i in range(10):
     writer.add_scalar('quadratic', i**2, global_step=i)
     writer.add_scalar('exponential', 2**i, global_step=i)
+writer.close()
 
 # 查看方式
 # step 1 ： cd 到生成的 runs 同级目录下
@@ -78,7 +79,7 @@ import torch.optim
 import matplotlib.pyplot as plt
 from tensorboardX import SummaryWriter
 
-writer = SummaryWriter(log_dir='runs', comment='Linear')
+writer = SummaryWriter(log_dir='runs')
 np.random.seed(100)
 
 x_train = np.linspace(-1, 1, 100).reshape(100, 1)
@@ -102,7 +103,7 @@ for epoch in range(100):
     optimizer.step()
     
     writer.add_scalar('训练损失值', loss, epoch)
-    
+writer.close()
 print('done')
 ```
 
@@ -199,6 +200,7 @@ for i in range(0, 3):
                      np.array(Image.open(file_list[i])),
                      global_step=i,
                      dataformats='HWC')
+writer.close()
 ```
 ![在这里插入图片描述](https://p.ipic.vip/ig5xtn.png)
 add_image 方法只能一次插入一张图片。如果要一次性插入多张图片，有两种方法：
