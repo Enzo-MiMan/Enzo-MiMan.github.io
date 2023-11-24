@@ -1,3 +1,13 @@
+b站视频 ：
+
+（一）记录训练数据指标 ：https://www.bilibili.com/video/BV18w411P75R
+
+（二）模型可视化、图像可视化： https://www.bilibili.com/video/BV1BG411U7qb
+
+
+
+
+
 # 日志记录 - tensorboard / tensorboardX <!-- {docsify-ignore} -->
 
 
