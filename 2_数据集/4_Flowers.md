@@ -124,12 +124,12 @@ train_images_path, train_images_label, val_images_path, val_images_label = read_
 
 # =============================== Transform ===============================
 img_size = 224
-train_transformer = transforms.Compose([transforms.RandomResizedCrop(img_size),
+train_transform = transforms.Compose([transforms.RandomResizedCrop(img_size),
                                         transforms.RandomHorizontalFlip(),
                                         transforms.ToTensor(),
                                         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
 
-val_transformer = transforms.Compose([transforms.Resize(int(img_size * 1.143)),
+val_transform = transforms.Compose([transforms.Resize(int(img_size * 1.143)),
                                       transforms.CenterCrop(img_size),
                                       transforms.ToTensor(),
                                       transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
@@ -138,11 +138,11 @@ val_transformer = transforms.Compose([transforms.Resize(int(img_size * 1.143)),
 
 train_dataset = MyDataSet(images_path=train_images_path,
                           images_class=train_images_label,
-                          transform=train_transformer)
+                          transform=train_transform)
 
 val_dataset = MyDataSet(images_path=val_images_path,
                         images_class=val_images_label,
-                        transform=val_transformer)
+                        transform=val_transform)
 
 # =============================== DataLoader ===============================
 
