@@ -2,6 +2,7 @@
 
 - [B站主页](https://space.bilibili.com/94779326)
 - [GitHub](https://github.com/Enzo-MiMan/cv_related_collections)
+- [知识星球](/知识星球.md)
 
 * 网络搭建
     * [Sequential、ModuleList、ModuleDict](/1_网络搭建/1_Sequential_ModuleList_ModuleDict.md)
