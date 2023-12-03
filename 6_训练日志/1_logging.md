@@ -101,7 +101,7 @@ logging.basicConfig(
 %(filename)s        调用日志输出的文件名
 %(module)s          调用日志输出日志的模块名
 %(funcName)s        调用日志输出日志的函数名
-%(1ineno)d          调用日志输出两数的语句所在的代码行
+%(lineno)d          调用日志输出两数的语句所在的代码行
 %(created)f         当前时间，用UNIx标准的表示时间的浮 点数表示
 %(relativecreated)d 输出日志信息时的，自Loqger创建以 来的毫秒数
 %(asctime)s         字符串形式的当前时间，默认格式是“2023-10-05 12:13:33,231”

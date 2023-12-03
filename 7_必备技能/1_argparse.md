@@ -54,6 +54,9 @@ parser.add_argument('food')
 parser.add_argument('--house', type=int, default=0)
 # type  代表输入参数的类型，从命令行输入的参数，默认是字符串类型
 # default 如果不指定该参数的值，则会使用该默认值
+
+parser.add_argument('--modelname', '-m', type=str, required=True, choices=['model_A', 'model_B'])
+# required 参数用于指定参数是否必需。如果设置为 True，则在命令行中必须提供该参数，否则将引发异常。
 ```
 
 #### 3）解析参数

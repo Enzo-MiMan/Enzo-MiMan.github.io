@@ -25,7 +25,6 @@
 * 数据读取与处理
 
     * [数据预处理、数据增强.md ](/3_数据读取与处理/1_数据预处理与数据增强.md)
-    * [torchvision.transforms 的使用 ](/3_数据读取与处理/2_transforms的使用.md)
     * [重写_transforms.md ](/3_数据读取与处理/3_重写_transforms.md)
     * [Dataset 与 DataLoader ](/3_数据读取与处理/4_Dataset、DataLoader.md)
     * [DataLoader 参数详解 ](/3_数据读取与处理/5_DataLoader参数详解.md)
