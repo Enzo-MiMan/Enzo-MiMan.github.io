@@ -17,7 +17,7 @@
     * [下载预训练模型 - torchvision.models](/1_网络搭建/10_下载预训练模型.md)
 * 数据集
     * [Pascal VOC 2007  & 2012](/2_数据集/1_Pascal_VOC.md)
-    * [MS COCO(未完)](/2_数据集/2_MS_COCO.md)
+    * [MS COCO](/2_数据集/2_MS_COCO.md)
     * [CIFAR10 & CIFAR100](/2_数据集/3_CIFAR)
     * [Flowers](/2_数据集/4_Flowers)
     * [MNIST 手写数字](/2_数据集/5_MNIST)

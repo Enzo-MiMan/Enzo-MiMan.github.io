@@ -101,7 +101,9 @@ MS COCO ：Microsoft Common Objects in Context
     └── ... (共5000张图像)
 ```
 
- **instances_train2017.json 文件的数据结构如下 （ instances_val2017.json 文件结构也是一样 ）**
+
+
+ **标注文件 instances_train2017.json 文件的数据结构如下 （ instances_val2017.json 文件结构也是一样 ）**
 
 ![5711695897153_.pic](https://p.ipic.vip/nhc8b4.png)
 
@@ -109,27 +111,62 @@ MS COCO ：Microsoft Common Objects in Context
 
 
 
-####  b、数据集解析
+####  数据查看
+
+```python
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+import torch
+import torchvision
+import torchvision.transforms as transforms
+import torchvision.datasets as datasets
+from torchvision.transforms import functional as F
+import random
 
 
+def collate_fn_coco(batch):
+    return tuple(zip(*batch))
 
+coco_det = datasets.CocoDetection(root="./COCO2017/train2017",
+                                  annFile="./COCO2017/annotations/instances_train2017.json")
 
+sampler = torch.utils.data.SequentialSampler(coco_det)  # RandomSampler
+batch_sampler = torch.utils.data.BatchSampler(sampler, 1, drop_last=True)
+data_loader = torch.utils.data.DataLoader(coco_det,
+                                          batch_sampler=batch_sampler,
+                                          collate_fn=collate_fn_coco)
 
+# 可视化
+iterator = iter(data_loader)
+imgs, gts = next(iterator)
+img,  gts_one_img = imgs[0], gts[0]
 
+bboxes = []
+ids = []
+for gt in gts_one_img:
+    bboxes.append([gt['bbox'][0],
+                   gt['bbox'][1],
+                   gt['bbox'][2],
+                   gt['bbox'][3]
+                   ])
+    ids.append(gt['category_id'])
 
+fig, ax = plt.subplots()
+for box, id in zip(bboxes, ids):
+    x = int(box[0])
+    y = int(box[1])
+    w = int(box[2])
+    h = int(box[3])
+    rect = plt.Rectangle((x, y), w, h, edgecolor='r', linewidth=2, facecolor='none')
+    ax.add_patch(rect)
+    ax.text(x, y, id, backgroundcolor="r")
 
+plt.axis("off")
+plt.imshow(img)
+plt.show()
+```
 
-### 2）语义分割任务
-
-
-
-
-
-### 3）实例分割任务
-
-
-
-
+<img src="https://p.ipic.vip/gv1gz0.png" alt="image-20231208114930716" style="zoom: 33%;" />
 
 ---
 
