@@ -1,9 +1,5 @@
 
 
-<img src="_media/封面2.jpg" width="599">
-
-
-
 # Enzo 的学习课件$\;$ <img src="_media/dinosaur.png" width="30">
 
 > 《深度学习基础 - Pytorch》
