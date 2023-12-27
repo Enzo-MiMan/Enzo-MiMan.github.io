@@ -1,4 +1,6 @@
 <!-- docs/_sidebar.md --> 
 
 - [B站主页](https://space.bilibili.com/94779326)
-- [GitHub](https://github.com/Enzo-MiMan/cv_related_collections)
+- [停更公告](/停更公告)
+- [知识星球](/zhishixingqiu)
+
