@@ -31,8 +31,3 @@ $\qquad$4、定期知识分享、学习建议、学习规划指导
 
 
 
-<br/>
-
-以下为知识星球部分课件内容，持续更新中...
-
-<img src="https://p.ipic.vip/c1giu5.png" alt="image-20231227170620692" style="zoom: 39%;" />
