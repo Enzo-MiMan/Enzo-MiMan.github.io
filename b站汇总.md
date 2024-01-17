@@ -8,7 +8,7 @@
 
 - 模型可视化
   -  torchsummary ： https://www.bilibili.com/video/BV1ZH4y1f7T1/
-  - netron ： https://www.bilibili.com/video/BV1rh411M7JP/
+  -  netron ： https://www.bilibili.com/video/BV1rh411M7JP/
   -  tensorboardX ： https://www.bilibili.com/video/BV1BV4y1C7HJ/
 - 模型搭建
   - 转置卷积：https://www.bilibili.com/video/BV1M84y1T7tY/
@@ -50,7 +50,7 @@
 - 日志记录
 
   - logging
-    - 1、基础使用、https://www.bilibili.com/video/BV1e34y1M7Ps/
+    - 1、基础使用、https://www.bilibili.com/video/BV1e34y1M7Ps/	
     - 2、高级应用、https://www.bilibili.com/video/BV1qw411F7EV/
     - 3、配置文件、https://www.bilibili.com/video/BV1dy4y1A7cG/
 
