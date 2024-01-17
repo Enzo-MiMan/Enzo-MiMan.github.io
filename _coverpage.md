@@ -1,11 +1,16 @@
 
 
-# Enzo 的学习课件$\;$ <img src="_media/dinosaur.png" width="30">
+# Enzo AI 学习小组$\;$ <img src="_media/dinosaur.png" width="30">
 
-> 《深度学习基础 - Pytorch》
+
+
+
+
+
 
 - B站：Enzo_Mi
 - github：Enzo-MiMan
+- 知识星球：Enzo AI 学习小组
 
-[GitHub](https://github.com/Enzo-MiMan)
-[开始学习](/README.md)
+[跳往B站](https://space.bilibili.com/94779326)
+[查看本站](/README.md)

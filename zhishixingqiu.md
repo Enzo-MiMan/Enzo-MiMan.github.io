@@ -1,6 +1,8 @@
 ### 知识星球 - Enzo AI学习小组 ｜小白分会 <!-- {docsify-ignore} -->
 
-<img src="/Users/enzo/Downloads/知识星球.jpg" alt="8141701270443_.pic" style="zoom:33%;" />
+
+
+<img src="_media/知识星球.jpg" alt="logo" width="500">
 
 <mark>本星球只针对入门小白，大🐮小🐮请勿入,  对于已入门的同学，之后会有针对具体研究方向的分会场  </mark>
 
@@ -24,11 +26,3 @@ $\qquad$2、随时向星主进行提问，星主每日定时查看并回复
 $\qquad$3、定期知识分享
 
 $\qquad$4、学习建议、学习规划指导
-
-
-
-<br/>
-
-以下为知识星球课件内容，持续更新中...
-
-<img src="https://p.ipic.vip/a7z9ov.png" alt="image-20240114162958900" style="zoom: 33%;" />
