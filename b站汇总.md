@@ -103,6 +103,11 @@
   - 5、CCFM 收尾工作 💰：https://www.bilibili.com/video/BV1q64y1P7hR/
   - 6、decoder 整体网络结构 💰：https://www.bilibili.com/video/BV1LK4y1z7op/
   - 7、denoising 理论讲解 💰：https://www.bilibili.com/video/BV1AW4y1w79p/
+  - 8、denoising 代码讲解 💰：https://www.bilibili.com/video/BV1eK411e7Jh/
+  - 9、IoU-aware query selection 理论讲解 💰 ：https://www.bilibili.com/video/BV1d64y1N7sg/
+  - 10、IoU-aware query selection 代码讲解 💰 ：https://www.bilibili.com/video/BV1Z94y1K744/
+  - 11、decoder + MSDeformableAttention 💰：https://www.bilibili.com/video/BV1mZ4y1J7xA/
+  - 12、损失函数 💰 ： https://www.bilibili.com/video/BV1uv421i7gC/
 
 
 
