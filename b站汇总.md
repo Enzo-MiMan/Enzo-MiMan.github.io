@@ -4,8 +4,11 @@
 
 ## 1、 深度学习基础
 
-需要课件，请加入 [知识星球](/zhishixingqiu) 获取
+配套课件，请加入 [知识星球](/zhishixingqiu) 获取
 
+- tensor相关
+  - tenso r内部存储结构 ：https://www.bilibili.com/video/BV1NH4y177VL/
+  - tensor 的连续性 与 contiguous()方法 ： https://www.bilibili.com/video/BV1Fz421R7T9/
 - 模型可视化
   -  torchsummary ： https://www.bilibili.com/video/BV1ZH4y1f7T1/
   -  netron ： https://www.bilibili.com/video/BV1rh411M7JP/
@@ -19,20 +22,17 @@
   - nn.Sequential、nn.ModuleList、nn.ModuleDict：https://www.bilibili.com/video/BV1zu4y1i7Bk/
 - 学习率调度器 ： https://www.bilibili.com/video/BV1BV4y1C7HJ/
 - 优化器（SGD、Momentum、Adagrad、RMSProp、Adam）：https://www.bilibili.com/video/BV1jh4y1q7ua/
-
 - 损失函数
 
   - 交叉熵损失函数 ： https://www.bilibili.com/video/BV1Sm4y127kY/
   - 信息量、熵、交叉熵、KL散度、交叉熵损失函数 ： https://www.bilibili.com/video/BV1L8411X7ZZ/
   - 目标检测 - 定位损失 ： https://www.bilibili.com/video/BV1Bw411J7R6/
   - focal loss💰：https://www.bilibili.com/video/BV1jG411B7X9/
-
 - 插值算法
 
   - 最近邻插值法 ：https://www.bilibili.com/video/BV1BM4y1t7tf/
   - 双线性插值法 ：https://www.bilibili.com/video/BV1wh411E7j9/
   - 双三次插值算法 ：https://www.bilibili.com/video/BV1Rc411P7WY/
-
 - 数据预处理&数据增强
 
   - Dataset、Dataloade - 上 ：https://www.bilibili.com/video/BV1vV4y1v7LY/
@@ -42,28 +42,23 @@
   - 图像预处理/图像增强 - 上：https://www.bilibili.com/video/BV1Uw411A7eK/
 
   - 图像预处理/图像增强 - 下：https://www.bilibili.com/video/BV1ew411k7UP/
-
 - 数据集
   - MSCOCO数据集：https://www.bilibili.com/video/BV1GT411W7ji/
   - Pascal VOC：https://www.bilibili.com/video/BV18s4y1v7FN/
-
 - 日志记录
 
   - logging
     - 1、基础使用、https://www.bilibili.com/video/BV1e34y1M7Ps/	
     - 2、高级应用、https://www.bilibili.com/video/BV1qw411F7EV/
     - 3、配置文件、https://www.bilibili.com/video/BV1dy4y1A7cG/
-
-  - wandb
-    - 1、安装与登录、https://www.bilibili.com/video/BV1Cu4y1a7qD/
-    - 2、基础使用与可视化、https://www.bilibili.com/video/BV1694y1G7dy/
-    - 3、wandb.watch() 模型、参数、梯度的监控：https://www.bilibili.com/video/BV14N411G7Xc/
-    - 4、wandb.Artifact() 版本管理、文件保存与下载：https://www.bilibili.com/video/BV15G41197gX/
-
-  - tensorboard / tensorboardX：https://www.bilibili.com/video/BV18w411P75R/
+  - tensorboard / tensorboardX：
     - 1、记录训练数据指标：https://www.bilibili.com/video/BV18w411P75R/
     - 2、模型可视化、图像可视化：https://www.bilibili.com/video/BV1BG411U7qb/
-
+  - wandb （知识星球内可看）
+    - 1、安装与登录
+    - 2、基础使用与可视化
+    - 3、wandb.watch() 模型、参数、梯度的监控
+    - 4、wandb.Artifact() 版本管理、文件保存与下载
 - 其他
   - 迁移学习：https://www.bilibili.com/video/BV1X8411f7q1/
   - IoU 与 NMS：https://www.bilibili.com/video/BV19L41187s4/
@@ -81,6 +76,8 @@
 - self-attention：https://www.bilibili.com/video/BV1qo4y1F7Ep/
 
 - Multi-head attention：https://www.bilibili.com/video/BV1gV4y167rS/
+
+- MultiheadAttention 中的参数 key_padding_mask 与 attention_mask ： https://www.bilibili.com/video/BV1Xg4y127fd/
 
 - ViT：https://www.bilibili.com/video/BV1xm4y1b7Pw/
 - Positional Embedding 💰：https://www.bilibili.com/video/BV1z84y1R7t8/
@@ -108,6 +105,7 @@
   - 10、IoU-aware query selection 代码讲解 💰 ：https://www.bilibili.com/video/BV1Z94y1K744/
   - 11、decoder + MSDeformableAttention 💰：https://www.bilibili.com/video/BV1mZ4y1J7xA/
   - 12、损失函数 💰 ： https://www.bilibili.com/video/BV1uv421i7gC/
+- Attention Map 💰：https://www.bilibili.com/video/BV1jC411W7sC/
 
 
 
