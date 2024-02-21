@@ -34,6 +34,4 @@ $\qquad$ $\qquad$  - 群内大家自行讨论问题
 
 
 
-
-
-[![pFtOIaV.jpg](https://s11.ax1x.com/2024/02/21/pFtOIaV.jpg)](https://imgse.com/i/pFtOIaV)
+<img src="_media/课件目录.jpg" alt="logo" width="1500">

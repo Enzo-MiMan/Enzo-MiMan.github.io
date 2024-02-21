@@ -4,7 +4,7 @@
 
 ## 1、 深度学习基础
 
-配套课件，请加入 [知识星球](/zhishixingqiu) 获取
+配套课件，请加入 [知识星球](/zhishixingqiu.md) 获取
 
 - tensor相关
   - tenso r内部存储结构 ：https://www.bilibili.com/video/BV1NH4y177VL/
