@@ -45,16 +45,16 @@
 - 数据集
   - MSCOCO数据集：https://www.bilibili.com/video/BV1GT411W7ji/
   - Pascal VOC：https://www.bilibili.com/video/BV18s4y1v7FN/
-- 日志记录
+- 日志记录（完整视频知识星球内可看）
 
   - logging
     - 1、基础使用、https://www.bilibili.com/video/BV1e34y1M7Ps/	
-    - 2、高级应用、https://www.bilibili.com/video/BV1qw411F7EV/
-    - 3、配置文件、https://www.bilibili.com/video/BV1dy4y1A7cG/
+    - 2、高级应用
+    - 3、配置文件
   - tensorboard / tensorboardX：
     - 1、记录训练数据指标：https://www.bilibili.com/video/BV18w411P75R/
-    - 2、模型可视化、图像可视化：https://www.bilibili.com/video/BV1BG411U7qb/
-  - wandb （知识星球内可看）
+    - 2、模型可视化、图像可视化：
+  - wandb 
     - 1、安装与登录
     - 2、基础使用与可视化
     - 3、wandb.watch() 模型、参数、梯度的监控
