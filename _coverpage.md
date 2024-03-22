@@ -14,7 +14,7 @@
 
  ### B站：Enzo_Mi
 
- ### University  of  Liverpool  |  Big Data and High Performance Computing  | MSC
+ ### University  of  Liverpool  |  Big Data and High Performance Computing  | MSc
 
 
 
