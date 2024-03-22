@@ -6,7 +6,7 @@
 
  💰标识 :  b站充电专属视频
 
-</b>
+</br>
 
 
 
@@ -18,9 +18,9 @@
 - ViT：https://www.bilibili.com/video/BV1xm4y1b7Pw/
 - Swin-transformer：https://www.bilibili.com/video/BV1Nz4y177aW/
 
-</b>
+</br>
 
-</b>
+</br>
 
 ## DETR
 
@@ -47,11 +47,11 @@
   - 11、decoder + MSDeformableAttention 💰：https://www.bilibili.com/video/BV1mZ4y1J7xA/
   - 12、损失函数 💰 ： https://www.bilibili.com/video/BV1uv421i7gC/
 
-</b>
+</br>
 
-</b>
+</br>
 
-## 相关
+## 相关知识点
 
 - 玩转resnet50：https://www.bilibili.com/video/BV1Ya4y1o7HP/
 
