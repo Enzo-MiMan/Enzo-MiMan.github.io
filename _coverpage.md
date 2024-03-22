@@ -1,15 +1,35 @@
 
 
-# Enzo AI 学习小组$\;$ <img src="_media/dinosaur.png" width="30">
+# Enzo ｜AI 学习小组$\;$ <img src="_media/dinosaur.png" width="30">
+
+<!-- _coverpage.md -->
 
 
 
+<!-- 背景图片 --> 
+
+![封面](/_media/封面1.jpg)
 
 
 
+ ### B站：Enzo_Mi
 
-- B站：Enzo_Mi
-- 知识星球：Enzo AI 学习小组
+ ### University  of  Liverpool  |  Big Data and High Performance Computing  | MSC
+
+
+
+</br>
+
+</br>
 
 [跳往B站](https://space.bilibili.com/94779326)
 [查看本站](/README.md)
+
+
+
+
+
+
+
+
+
