@@ -34,6 +34,9 @@ YOLOv9（2024年）：https://arxiv.org/pdf/2402.13616.pdf    |    https://githu
 
 - yolov1- 下：https://www.bilibili.com/video/BV1ks4y137oU/
 
-- yolov5：图像增强-mosaic ：https://www.bilibili.com/video/BV1ax4y1U7Ym/
+- yolov5 数据增强 之 mosaic ： https://www.bilibili.com/video/BV1ax4y1U7Ym/
 
-- yolov5：图像增强-放射变换、透视变换  ： 更新中。。。
+- yolov5 数据增强 之 仿射变换 、透视变换 ：https://www.bilibili.com/video/BV1Vr421h7wF/
+- yolov5 数据增强 之 仿射变换 、透视变换 -  opencv 相关使用 ： https://www.bilibili.com/video/BV1sp42117Ti/
+- yolov5 网络结构 yaml文件解读 ： https://www.bilibili.com/video/BV1tH4y1n7MT/
+- yolov5 网络搭建 代码精讲 ：https://www.bilibili.com/video/BV1YZ421e7zH/

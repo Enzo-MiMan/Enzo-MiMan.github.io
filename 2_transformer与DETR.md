@@ -14,7 +14,6 @@
 
 - self-attention：https://www.bilibili.com/video/BV1qo4y1F7Ep/
 - Multi-head attention：https://www.bilibili.com/video/BV1gV4y167rS/
-- MultiheadAttention 中的参数 key_padding_mask 与 attention_mask ： https://www.bilibili.com/video/BV1Xg4y127fd/
 - ViT：https://www.bilibili.com/video/BV1xm4y1b7Pw/
 - Swin-transformer：https://www.bilibili.com/video/BV1Nz4y177aW/
 
