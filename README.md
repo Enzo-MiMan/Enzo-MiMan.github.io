@@ -8,18 +8,23 @@
 
 <br>
 
-深度学习基础课件 ： https://gf.bilibili.com/item/detail/1103548011
+Enzo | CV 深度学习课件 ： https://gf.bilibili.com/item/detail/1103548011
 
 ```
-1、《深度学习基础》课件  --  持续迭代
+其中包含：
+1、《Enzo|CV深度学习课件》课件
 -  可作为学习资料，也可作为随时翻阅的速查手册
--  部分章节有讲解视频，以百度云链接的形式(或b站视频链接形式) 贴在对应页面置顶处
+-  课件为线上飞书课件（网页），我会持续更新，你亦可查看购买之后更新的所有的内容
+-  部分章节有 讲解视频，以百度云链接的形式(或b站视频链接形式) 贴在对应页面置顶处
 -  当前深度学习基础内容已基本更新完(2024.3.17)，后续会轻度迭代，开始重点更新经典算法相关内容
 -  随着课件完善，后续会逐步涨价
 
-2、包括部分充电视频课程（包括 DETR 代码精讲、知识蒸馏等，不包括 RT-DETR 和 DDPM）
+2、除深度学习基础内容外，课件中还包括 ：
+-  transformer 与 DETR 系列视频中的课件
+-  部分充电视频课程，包括 DETR 代码精讲、positional encoding、知识蒸馏，等
+-  不包括！！不包括  RT-DETR 和 DDPM 的充电视频课程，需单独购买 ！！
 
-3、包括其他深度学习 相关资料 
+3、包括其他深度学习相关资料
 ```
 
 
@@ -80,4 +85,9 @@ b站试看讲解视频：
   - IoU 与 NMS：https://www.bilibili.com/video/BV19L41187s4/
   - 模型结构图 绘画工具 - Axure：https://www.bilibili.com/video/BV12u411c7PZ/
   - Kaggle项目部署：https://www.bilibili.com/video/BV1qM41137SY/
+- 并行训练
+  - Outline：https://www.bilibili.com/video/BV1RD4213737/
+  - 多进程并行任务：https://www.bilibili.com/video/BV13b421B7Tx/
+  - 初始化进程组：https://www.bilibili.com/video/BV1pw4m1i7BU/
+  - 单机多卡与多机多卡：https://www.bilibili.com/video/BV1ZJ4m137bz/
 
